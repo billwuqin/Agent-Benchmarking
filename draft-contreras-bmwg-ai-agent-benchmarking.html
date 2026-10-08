@@ -1418,49 +1418,6 @@ defined to be:<a href="#section-5.1-1" class="pilcrow">¶</a></p>
             <p id="section-5.1-2.3.1">Independent or part of multi-step workflows<a href="#section-5.1-2.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-5.1-3">Network operation tasks are categorized into three complexity levels:
-simple, medium, and difficult, corresponding to difficulty levels T1,
-T2, and T3, respectively. The definition standards for each task
-level are detailed below.<a href="#section-5.1-3" class="pilcrow">¶</a></p>
-<table class="center" id="table-1">
-          <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
-<thead>
-            <tr>
-              <th class="text-left" rowspan="1" colspan="1">Difficulty</th>
-              <th class="text-left" rowspan="1" colspan="1">Complexity</th>
-              <th class="text-left" rowspan="1" colspan="1">Characteristic</th>
-              <th class="text-left" rowspan="1" colspan="1">Scope</th>
-              <th class="text-left" rowspan="1" colspan="1">Operational Risk</th>
-              <th class="text-left" rowspan="1" colspan="1">Example Task</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">T1</td>
-              <td class="text-left" rowspan="1" colspan="1">Simple</td>
-              <td class="text-left" rowspan="1" colspan="1">Single device, single parameter query, or simple status check; no change operations</td>
-              <td class="text-left" rowspan="1" colspan="1">Single device,single domain</td>
-              <td class="text-left" rowspan="1" colspan="1">low, no configuration change</td>
-              <td class="text-left" rowspan="1" colspan="1">Equipment information query, performance metric query, alarm information query</td>
-            </tr>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">T2</td>
-              <td class="text-left" rowspan="1" colspan="1">Medium</td>
-              <td class="text-left" rowspan="1" colspan="1">Require multi-step reasoning or multi-device coordination; clear fault location; change operations with standard procedure</td>
-              <td class="text-left" rowspan="1" colspan="1">multi-devices, single domain</td>
-              <td class="text-left" rowspan="1" colspan="1">involve minor configuration adjustment with rollback option</td>
-              <td class="text-left" rowspan="1" colspan="1">Fault location and root cause analysis (single fault source), standard configuration changes (such as VLAN adjustments</td>
-            </tr>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">T3</td>
-              <td class="text-left" rowspan="1" colspan="1">difficult</td>
-              <td class="text-left" rowspan="1" colspan="1">Multi-device, multi-protocol coordination, cross-domain changes, complex root cause analysis, requiring impact assessment and rollback verification</td>
-              <td class="text-left" rowspan="1" colspan="1">multi-device coordiniation, cross domain</td>
-              <td class="text-left" rowspan="1" colspan="1">high, Configuration errors may cause service interruption</td>
-              <td class="text-left" rowspan="1" colspan="1">Multi-device BGP neighbor relationship fault recovery, core device configuration change</td>
-            </tr>
-          </tbody>
-        </table>
 </section>
 </div>
 <div id="execution-model">
