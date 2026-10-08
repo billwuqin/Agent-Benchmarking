@@ -184,6 +184,18 @@ defined to be:
 
 *  Independent or part of multi-step workflows
 
+
+Network operation tasks are categorized into three complexity levels:
+simple, medium, and difficult, corresponding to difficulty levels T1,
+T2, and T3, respectively. The definition standards for each task
+level are detailed below.
+
+| Difficulty | Complexity | Characteristic| Scope | Operational Risk | Example Task |
+|---|---|---|---|---|---|
+|T1|Simple|Single device, single parameter query, or simple status check; no change operations|Single device,single domain|low, no configuration change|Equipment information query, performance metric query, alarm information query|
+|T2|Medium|Require multi-step reasoning or multi-device coordination; clear fault location; change operations with standard procedure|multi-devices, single domain|involve minor configuration adjustment with rollback option|Fault location and root cause analysis (single fault source), standard configuration changes (such as VLAN adjustments|
+|T3|difficult|Multi-device, multi-protocol coordination, cross-domain changes, complex root cause analysis, requiring impact assessment and rollback verification|multi-device coordiniation, cross domain|high, Configuration errors may cause service interruption |Multi-device BGP neighbor relationship fault recovery, core device configuration change|
+
 ##  Execution Model
 
 Each task execution has to be modeled as an episode including:
@@ -240,7 +252,7 @@ execution and evaluated consistently across SUTs).
 
 *  Pass/Fail ratio: it is the ratio between the number of successful
    task executions and the number of failed task executions during
-   the benchmark.  Failed executions include incorrect outcomes,
+   the benchmark. Failed executions include incorrect outcomes,
    policy violations, unrecoverable errors, or timeout conditions.
 
 *  Partial completion rate: it is the proportion of benchmark
