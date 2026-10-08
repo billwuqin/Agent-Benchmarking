@@ -208,7 +208,7 @@ deployed, for inscaten in terms of topology, vendors deployed
 #  Benchmarking Metrics
 
 Next sub-sections propose a number of metrics to be derived from the
-benchmarkign process.  These metrics are planned to be used for
+benchmarking process.  These metrics are planned to be used for
 comparison among the distinct AI agents being tested.
 
 ##  Performance Metrics
