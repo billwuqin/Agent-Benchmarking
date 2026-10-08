@@ -2,10 +2,10 @@
 
 
 
-WG Working Group                                         L. M. Contreras
+Benchmarking Methodology                                 L. M. Contreras
 Internet-Draft                                                Telefonica
-Intended status: Informational                            3 October 2026
-Expires: 6 April 2027
+Intended status: Informational                            8 October 2026
+Expires: 11 April 2027
 
 
       Benchmarking Methodology for AI Agents in Network Operations
@@ -25,6 +25,17 @@ Abstract
    independent framework to compare AI agent effectiveness in controlled
    network environments.
 
+Discussion Venues
+
+   This note is to be removed before publishing as an RFC.
+
+   Discussion of this document takes place on the Benchmarking
+   Methodology Working Group mailing list (bmwg@ietf.org), which is
+   archived at https://mailarchive.ietf.org/arch/browse/bmwg/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/billwuqin/Agent-Benchmarking.
+
 Status of This Memo
 
    This Internet-Draft is submitted in full conformance with the
@@ -40,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 6 April 2027.
+   This Internet-Draft will expire on 11 April 2027.
 
 Copyright Notice
 
@@ -224,6 +235,53 @@ Table of Contents
    *  Clearly specified with expected outputs
 
    *  Independent or part of multi-step workflows
+
+   Network operation tasks are categorized into three complexity levels:
+   simple, medium, and difficult, corresponding to difficulty levels T1,
+   T2, and T3, respectively.  The definition standards for each task
+   level are detailed below.
+
+   +==========+==========+==============+==============+=============+=============+
+   |Difficulty|Complexity|Characteristic|Scope         |Operational  |Example Task |
+   |          |          |              |              |Risk         |             |
+   +==========+==========+==============+==============+=============+=============+
+   |T1        |Simple    |Single device,|Single        |low, no      |Equipment    |
+   |          |          |single        |device,single |configuration|information  |
+   |          |          |parameter     |domain        |change       |query,       |
+   |          |          |query, or     |              |             |performance  |
+   |          |          |simple status |              |             |metric query,|
+   |          |          |check; no     |              |             |alarm        |
+   |          |          |change        |              |             |information  |
+   |          |          |operations    |              |             |query        |
+   +----------+----------+--------------+--------------+-------------+-------------+
+   |T2        |Medium    |Require multi-|multi-devices,|involve minor|Fault        |
+   |          |          |step reasoning|single domain |configuration|location and |
+   |          |          |or multi-     |              |adjustment   |root cause   |
+   |          |          |device        |              |with rollback|analysis     |
+   |          |          |coordination; |              |option       |(single fault|
+   |          |          |clear fault   |              |             |source),     |
+   |          |          |location;     |              |             |standard     |
+   |          |          |change        |              |             |configuration|
+   |          |          |operations    |              |             |changes (such|
+   |          |          |with standard |              |             |as VLAN      |
+   |          |          |procedure     |              |             |adjustments  |
+   +----------+----------+--------------+--------------+-------------+-------------+
+   |T3        |difficult |Multi-device, |multi-device  |high,        |Multi-device |
+   |          |          |multi-protocol|coordiniation,|Configuration|BGP neighbor |
+   |          |          |coordination, |cross domain  |errors may   |relationship |
+   |          |          |cross-domain  |              |cause service|fault        |
+   |          |          |changes,      |              |interruption |recovery,    |
+   |          |          |complex root  |              |             |core device  |
+   |          |          |cause         |              |             |configuration|
+   |          |          |analysis,     |              |             |change       |
+   |          |          |requiring     |              |             |             |
+   |          |          |impact        |              |             |             |
+   |          |          |assessment and|              |             |             |
+   |          |          |rollback      |              |             |             |
+   |          |          |verification  |              |             |             |
+   +----------+----------+--------------+--------------+-------------+-------------+
+
+                                  Table 1
 
 5.2.  Execution Model
 
