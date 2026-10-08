@@ -70,7 +70,7 @@ networking with AI agents.
    task.
 
 *  Tool Interaction: invocation, by the agent, of external systems
-   (e.g., CLI, APIs) so to perform actions or obtain information.
+   (e.g., CLI, APIs) so as to perform actions or obtain information.
 
 *  Success: completion of a task meeting predefined acceptance
    criteria.
@@ -83,17 +83,17 @@ networking with AI agents.
 This document defines methodologies to benchmark AI agents performing
 network control and management operations, such as:
 
-*  Network configuration tasks (e.g., routing, policy deployment)
+*  Network configuration change management tasks (e.g., routing, policy deployment)
 
-*  Troubleshooting and root cause analysis
+*  Troubleshooting (e.g., network anomaly detection, root cause analysis)
 
-*  Network optimization and adaptation actions
+*  Network optimization (e.g., configuration validation, actions adaptation)
 
 The final objective is to propose a benchmarking methodology able to
 provide a reproducible and vendor-independent framework to compare AI
-agent effectiveness in controlled network environments when
-performing representative control and management actions in the
-network.
+agent effectiveness, performance and close loop network operation
+capability in controlled network environments when performing
+representative control and management actions in the network.
 
 It is expected the progressive introduction of different AI agents
 performing network operations tasks through multi-step interaction
@@ -109,7 +109,7 @@ The methodology is intended to enable:
    network tasks
 
 *  Evaluation of task effectiveness, execution efficiency,
-   operational robustness, and safety-related behavior
+   operational robustness, and safety/compliance-related behavior
 
 *  Characterization of agent behavior across deterministic and
    perturbed operating conditions
@@ -127,15 +127,27 @@ assumed the following parts being in place:
 
 *  Reference network to be used as common environment for the
    benchmarking execution.  This reference network can consist of
-   control plane modules (e.g., SDN controller) and network elements,
-   building a setup sufficiently rich so to allow non-evidemt tasks
-   to be formulated.
+   control plane modules (e.g., SDN controller) and physical network
+   comprising of network elements, emulation network comprising of
+   virtual network functions, building a setup sufficiently rich so
+   as to allow non-evidemt tasks to be formulated.
 
-(Note: the reference network could probably need to be defined
+Note that the reference network could probably need to be defined
 according to the reality of the real network in which the agents are
 intended to be used, in terms of test topology, services offered by
-the network, vendors deployed on it, etc.  Probably the definition of
-such reference network should be out of scope of the document).
+the network, vendors deployed on it, etc. Emulation network are used
+to compensate for the limitations of physical network topology,
+such as the limited scale and difficulty in constructing fault
+scenarios in batches.
+
+The test environment can deploy two or more differentiated network
+topologies to verify the stability of the network operations and
+network management agent when switching to network environments with
+different topologies, protocol configurations, operating states, and
+service scenarios under functionally consistent operations and
+maintenance tasks. Typical network topologies include a three-layer
+architecture of core-aggregation-access in a campus network and
+a two-layer architecture of leaf-spine in a data center.
 
 The SUT boundary is defined as the set of input (prompts, telemetry
 ingestion and processing, etc) and output (commands, configurations,
@@ -146,7 +158,7 @@ isolated from the SUT and treated as part of the test environment.
 The following aspects of the SUT (e.g., the AI agent implementation)
 have to be documented:
 
-*  Model name and version
+*  Model name, version and model size
 
 *  Inference configuration parameters
 
@@ -156,7 +168,7 @@ have to be documented:
 
 *  List of enabled tools and associated permissions
 
-*  Safety guardrails or approval mechanisms
+*  Safety guardrails or human on the loop approval mechanisms
 
 *  Any persistent state retained across benchmark runs
 
