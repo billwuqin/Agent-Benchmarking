@@ -311,6 +311,26 @@ nature.  When the benchmarking is used by a network provider this
 metric could be not considered since the scenario of future usage in
 production network is specific to that network provider).
 
+## Security Compliance Metric
+
+This metric assesses the AI agent's ability to protect
+sensitive data during operational tasks, ensuring that sensitive
+data such as user privacy, network topology, and configuration
+information are not leaked or misused. It also assesses the
+agent's ability to identify and block malicious or high-risk
+user input, ensuring that the agent does not perform
+destructive operations or is induced to perform unauthorized
+operations.
+
+* Security Compliance Rate: It is ratio between number of security
+  compliance tasks and total number of task executions.
+
+Note that the benchmarking framework needs to ensure agent integrity
+of audit logs without unauthorized operations, high-risk bypasses,
+throughout the entire task execution process. The security attack
+risk type and evaluation criteria are listed as follows:
+
+
 #  Reporting Format
 
 The results of the benchmarking have to include sufficient
