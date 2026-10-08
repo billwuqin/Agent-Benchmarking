@@ -1201,6 +1201,9 @@ network environments.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.5">
                 <p id="section-toc.1-1.6.2.5.1"><a href="#section-6.5" class="auto internal xref">6.5</a>.  <a href="#name-coverage-metrics" class="internal xref">Coverage Metrics</a></p>
 </li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.6">
+                <p id="section-toc.1-1.6.2.6.1"><a href="#section-6.6" class="auto internal xref">6.6</a>.  <a href="#name-security-compliance-metric" class="internal xref">Security Compliance Metric</a></p>
+</li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
@@ -1611,6 +1614,31 @@ service contexts defined by the benchmark.<a href="#section-6.5-1.2.1" class="pi
 nature.  When the benchmarking is used by a network provider this
 metric could be not considered since the scenario of future usage in
 production network is specific to that network provider).<a href="#section-6.5-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="security-compliance-metric">
+<section id="section-6.6">
+        <h3 id="name-security-compliance-metric">
+<a href="#section-6.6" class="section-number selfRef">6.6. </a><a href="#name-security-compliance-metric" class="section-name selfRef">Security Compliance Metric</a>
+        </h3>
+<p id="section-6.6-1">This metric assesses the AI agent's ability to protect
+sensitive data during operational tasks, ensuring that sensitive
+data such as user privacy, network topology, and configuration
+information are not leaked or misused. It also assesses the
+agent's ability to identify and block malicious or high-risk
+user input, ensuring that the agent does not perform
+destructive operations or is induced to perform unauthorized
+operations.<a href="#section-6.6-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.6-2.1">
+            <p id="section-6.6-2.1.1">Security Compliance Rate: It is ratio between number of security
+compliance tasks and total number of task executions.<a href="#section-6.6-2.1.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-6.6-3">Note that the benchmarking framework needs to ensure agent integrity
+of audit logs without unauthorized operations, high-risk bypasses,
+throughout the entire task execution process. The security attack
+risk type and evaluation criteria are listed as follows:<a href="#section-6.6-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
