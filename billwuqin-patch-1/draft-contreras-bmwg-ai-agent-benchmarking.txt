@@ -195,15 +195,6 @@ Table of Contents
    as the limited scale and difficulty in constructing fault scenarios
    in batches.
 
-   The test environment can deploy two or more differentiated network
-   topologies to verify the stability of the network operations and
-   network management agent when switching to network environments with
-   different topologies, protocol configurations, operating states, and
-   service scenarios under functionally consistent operations and
-   maintenance tasks.  Typical network topologies include a three-layer
-   architecture of core-aggregation-access in a campus network and a
-   two-layer architecture of leaf-spine in a data center.
-
    The SUT boundary is defined as the set of input (prompts, telemetry
    ingestion and processing, etc) and output (commands, configurations,
    actions) interfaces.  Thus, external systems (such as SDN

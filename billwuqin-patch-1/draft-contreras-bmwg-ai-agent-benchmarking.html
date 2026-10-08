@@ -1358,47 +1358,39 @@ the network, vendors deployed on it, etc. Emulation network are used
 to compensate for the limitations of physical network topology,
 such as the limited scale and difficulty in constructing fault
 scenarios in batches.<a href="#section-4-3" class="pilcrow">¶</a></p>
-<p id="section-4-4">The test environment can deploy two or more differentiated network
-topologies to verify the stability of the network operations and
-network management agent when switching to network environments with
-different topologies, protocol configurations, operating states, and
-service scenarios under functionally consistent operations and
-maintenance tasks. Typical network topologies include a three-layer
-architecture of core-aggregation-access in a campus network and
-a two-layer architecture of leaf-spine in a data center.<a href="#section-4-4" class="pilcrow">¶</a></p>
-<p id="section-4-5">The SUT boundary is defined as the set of input (prompts, telemetry
+<p id="section-4-4">The SUT boundary is defined as the set of input (prompts, telemetry
 ingestion and processing, etc) and output (commands, configurations,
 actions) interfaces.  Thus, external systems (such as SDN
 controllers, inventory, network topology, telemetry systems, etc) are
-isolated from the SUT and treated as part of the test environment.<a href="#section-4-5" class="pilcrow">¶</a></p>
-<p id="section-4-6">The following aspects of the SUT (e.g., the AI agent implementation)
-have to be documented:<a href="#section-4-6" class="pilcrow">¶</a></p>
+isolated from the SUT and treated as part of the test environment.<a href="#section-4-4" class="pilcrow">¶</a></p>
+<p id="section-4-5">The following aspects of the SUT (e.g., the AI agent implementation)
+have to be documented:<a href="#section-4-5" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4-7.1">
-          <p id="section-4-7.1.1">Model name, version and model size<a href="#section-4-7.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-4-6.1">
+          <p id="section-4-6.1.1">Model name, version and model size<a href="#section-4-6.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-4-7.2">
-          <p id="section-4-7.2.1">Inference configuration parameters<a href="#section-4-7.2.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-4-6.2">
+          <p id="section-4-6.2.1">Inference configuration parameters<a href="#section-4-6.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-4-7.3">
-          <p id="section-4-7.3.1">Prompting or instruction templates used during benchmark execution<a href="#section-4-7.3.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-4-6.3">
+          <p id="section-4-6.3.1">Prompting or instruction templates used during benchmark execution<a href="#section-4-6.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-4-7.4">
-          <p id="section-4-7.4.1">Memory mechanisms, if any<a href="#section-4-7.4.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-4-6.4">
+          <p id="section-4-6.4.1">Memory mechanisms, if any<a href="#section-4-6.4.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-4-7.5">
-          <p id="section-4-7.5.1">List of enabled tools and associated permissions<a href="#section-4-7.5.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-4-6.5">
+          <p id="section-4-6.5.1">List of enabled tools and associated permissions<a href="#section-4-6.5.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-4-7.6">
-          <p id="section-4-7.6.1">Safety guardrails or human on the loop approval mechanisms<a href="#section-4-7.6.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-4-6.6">
+          <p id="section-4-6.6.1">Safety guardrails or human on the loop approval mechanisms<a href="#section-4-6.6.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-4-7.7">
-          <p id="section-4-7.7.1">Any persistent state retained across benchmark runs<a href="#section-4-7.7.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-4-6.7">
+          <p id="section-4-6.7.1">Any persistent state retained across benchmark runs<a href="#section-4-6.7.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="section-4-8">Furthermore, if the agent uses stochastic model settings, such as
+<p id="section-4-7">Furthermore, if the agent uses stochastic model settings, such as
 temperature or sampling parameters, these settings should be also
-reported.<a href="#section-4-8" class="pilcrow">¶</a></p>
+reported.<a href="#section-4-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="benchmarking-framework">
