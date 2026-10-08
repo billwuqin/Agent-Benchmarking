@@ -247,6 +247,24 @@ execution and evaluated consistently across SUTs).
    executions that achieve a subset of the predefined task objectives
    without satisfying the complete success criteria.
 
+## Accurancy Metrics
+
+* Task comprehension accuracy: the ratio of number of tasks that have been correctly comprehended
+  and Total number of tasks executed. The number of taks that have been correctly comprehended
+  is the sum of the number of interactive tasks that are fully and accurately understood
+  on the first attempt and the number of tasks that meet the requirements in autonomous
+  response tasks.
+
+* Analysis and Decision accuracy: the ratio of number of tasks that analyze correctly and make correct decision
+  and total number of tasks executed. The number of taks that analyze correctly and make correct decision
+  is the sum of the number of tasks that analyze correctly and make correct decisions in interactive tasks
+  and the number of autonomous response tasks that meet specific criteria in analysis and decision-making.
+
+* Execution accuracy: the ratio of number of tasks that have been executed correctly
+  and total number of tasks executed. The number of taks that have been executed correctly
+  is the sum of the number of tasks that execute correctly in interactive tasks and the number of tasks
+  that meet specific criteria in the autonomous response task.
+
 ##  Efficiency Metrics
 
 *  Tokens consumed (input/output): it is the total number of input
