@@ -1193,7 +1193,7 @@ network environments.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
                 <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-effectiveness-metrics" class="internal xref">Effectiveness Metrics</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.3">
-                <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="auto internal xref">6.3</a>.  <a href="#name-accurancy-metrics" class="internal xref">Accurancy Metrics</a></p>
+                <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="auto internal xref">6.3</a>.  <a href="#name-accuracy-metrics" class="internal xref">Accuracy Metrics</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.4">
                 <p id="section-toc.1-1.6.2.4.1"><a href="#section-6.4" class="auto internal xref">6.4</a>.  <a href="#name-efficiency-metrics" class="internal xref">Efficiency Metrics</a></p>
@@ -1524,30 +1524,72 @@ without satisfying the complete success criteria.<a href="#section-6.2-3.2.1" cl
         </ul>
 </section>
 </div>
-<div id="accurancy-metrics">
+<div id="accuracy-metrics">
 <section id="section-6.3">
-        <h3 id="name-accurancy-metrics">
-<a href="#section-6.3" class="section-number selfRef">6.3. </a><a href="#name-accurancy-metrics" class="section-name selfRef">Accurancy Metrics</a>
+        <h3 id="name-accuracy-metrics">
+<a href="#section-6.3" class="section-number selfRef">6.3. </a><a href="#name-accuracy-metrics" class="section-name selfRef">Accuracy Metrics</a>
         </h3>
+<p id="section-6.3-1">The following Accuracy metrics assess close loop network task operation capabilities
+including awareness, analysis, decision-making and execution and intent. The network tasks
+can be further break down into interactive Q&amp;A tasks and autonomous response tasks.<a href="#section-6.3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-6.3-1.1">
-            <p id="section-6.3-1.1.1">Task comprehension accuracy: the ratio of number of tasks that have been correctly comprehended
+<li class="normal" id="section-6.3-2.1">
+            <p id="section-6.3-2.1.1">Task comprehension accuracy: the ratio of number of tasks that have been correctly comprehended
 and Total number of tasks executed. The number of taks that have been correctly comprehended
-is the sum of the number of interactive tasks that are fully and accurately understood
-on the first attempt and the number of tasks that meet the requirements in autonomous
-response tasks.<a href="#section-6.3-1.1.1" class="pilcrow">¶</a></p>
+is the sum of the number of interactive Q&amp;A tasks that are fully and accurately understood
+on the first attempt and the number of tasks that meet the specific conditions in autonomous
+response tasks. The specific conditions include:<a href="#section-6.3-2.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.3-2.1.2.1">
+                <p id="section-6.3-2.1.2.1.1">Accurately identify the faulty object and the fault occurrence time;<a href="#section-6.3-2.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-6.3-1.2">
-            <p id="section-6.3-1.2.1">Analysis and Decision accuracy: the ratio of number of tasks that analyze correctly and make correct decision
+              <li class="normal" id="section-6.3-2.1.2.2">
+                <p id="section-6.3-2.1.2.2.1">Accurately describe the fault phenomenon;<a href="#section-6.3-2.1.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-2.1.2.3">
+                <p id="section-6.3-2.1.2.3.1">Provide supporting information about the fault (logs, alarms, status, configuration, etc.).<a href="#section-6.3-2.1.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-6.3-2.2">
+            <p id="section-6.3-2.2.1">Analysis and Decision accuracy: the ratio of number of tasks that analyze correctly and make correct decision
 and total number of tasks executed. The number of taks that analyze correctly and make correct decision
-is the sum of the number of tasks that analyze correctly and make correct decisions in interactive tasks
-and the number of autonomous response tasks that meet specific criteria in analysis and decision-making.<a href="#section-6.3-1.2.1" class="pilcrow">¶</a></p>
+is the sum of the number of tasks that analyze correctly and make correct decisions in interactive Q&amp;A tasks
+and the number of autonomous response tasks that meet specific criteria in analysis and decision-making.
+Specific criteria in analysis include:<a href="#section-6.3-2.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.3-2.2.2.1">
+                <p id="section-6.3-2.2.2.1.1">The problematic equipment was accurately identified<a href="#section-6.3-2.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-6.3-1.3">
-            <p id="section-6.3-1.3.1">Execution accuracy: the ratio of number of tasks that have been executed correctly
+              <li class="normal" id="section-6.3-2.2.2.2">
+                <p id="section-6.3-2.2.2.2.1">the cause of the failure was correct<a href="#section-6.3-2.2.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-2.2.2.3">
+                <p id="section-6.3-2.2.2.3.1">and the quantitative evidence was sufficient.
+Specific criteria in decision-making include:<a href="#section-6.3-2.2.2.3.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-2.2.2.4">
+                <p id="section-6.3-2.2.2.4.1">The decision-making intent and basis are reasonable<a href="#section-6.3-2.2.2.4.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-2.2.2.5">
+                <p id="section-6.3-2.2.2.5.1">and the decision-making results are accurate.<a href="#section-6.3-2.2.2.5.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-6.3-2.3">
+            <p id="section-6.3-2.3.1">Execution accuracy: the ratio of number of tasks that have been executed correctly
 and total number of tasks executed. The number of taks that have been executed correctly
-is the sum of the number of tasks that execute correctly in interactive tasks and the number of tasks
-that meet specific criteria in the autonomous response task.<a href="#section-6.3-1.3.1" class="pilcrow">¶</a></p>
+is the sum of the number of tasks that execute correctly in interactive Q&amp;A tasks and the number of tasks
+that meet specific criteria in the autonomous response task. The specific criteria include:<a href="#section-6.3-2.3.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.3-2.3.2.1">
+                <p id="section-6.3-2.3.2.1.1">Repair/change is executed successfully<a href="#section-6.3-2.3.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-2.3.2.2">
+                <p id="section-6.3-2.3.2.2.1">The effectiveness has been fully quantified and verified, such as the link going from Down to Up
+or the packet loss rate changing from 100% to 0%.<a href="#section-6.3-2.3.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
         </ul>
 </section>
