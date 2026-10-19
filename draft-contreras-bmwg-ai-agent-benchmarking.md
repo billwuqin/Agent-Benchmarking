@@ -396,6 +396,18 @@ management system, AI agent module, and AI agent test system.
 ~~~~
 {:#campus title="Campus Network Operation Test Agent Network Topology" artwork-align="center"}
 
+| Test Config | Category | Config Capabilities|
+|---|---|---|
+|SUT|Mobile Phone/Laptop|2.4G Access,5G Access|
+|Network Element|WLAN AP|Telemetry Support|
+|Network Element|Switch|Telemetry Support|
+|Network Operation Agent|O&M Management System|Support configuration distribution, state monitoring, and fault handling through the existing management system|
+|Network Operation Large Model|LLM|Identify the model vendor, version, and number of parameters and deployed model locally to ensure data remains within the domain|
+|Network Operation Agent Hardware Platform|Hardware Platform|GPU/NPU Model and Number|
+|Agetn Test System|Test Sytem|simulate scenarios such as traffic peaks and sudden surges with mixed east-west and north-south traffic using a professional traffic testing instrument
+collect agent operation information and produce test results|
+{: #tab-test-config title="Test System Configuration Requirements"}
+
 
 # Data Center Network Operation Agent Test Method
 
