@@ -1837,11 +1837,54 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
         <h3 id="name-interactive-qa-task-test-re">
 <a href="#appendix-A.2" class="section-number selfRef">A.2. </a><a href="#name-interactive-qa-task-test-re" class="section-name selfRef">Interactive Q&amp;A Task Test Requirements</a>
         </h3>
-<p id="appendix-A.2-1">The test set is defined based on the scenario definition for Campus Network Operation Agent. The Test requirements is shown as follows:<a href="#appendix-A.2-1" class="pilcrow">¶</a></p>
-<span id="name-interactive-qa-test-system-"></span><div id="campus-interact">
+<p id="appendix-A.2-1">The Test requirements for Campus Network Operation Agent scenario is shown as follows:<a href="#appendix-A.2-1" class="pilcrow">¶</a></p>
 <table class="center" id="table-2">
+          <caption><a href="#table-2" class="selfRef">Table 2</a></caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Test Objective</th>
+              <th class="text-left" rowspan="1" colspan="1">Verify the ability to understand intent, retrieve knowledge, and assist in execution in human-machine dialogue or machine-machine interaction scenarios.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Test Case Requirements</td>
+              <td class="text-left" rowspan="1" colspan="1">Cover at least three scenarios: information query, fault diagnosis, and configuration change. Each scenario must have at least three test cases (including normal requests and malicious requests for security testing), covering different difficulty levels from T1 to T3 (basic, medium, and hard).</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Test Topo</td>
+              <td class="text-left" rowspan="1" colspan="1">Refer to campus topo to select typical network deployment scenarios such as smart classroom or dormitory</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Preset Condition</td>
+              <td class="text-left" rowspan="1" colspan="1">a)The network environment is running stably, and baseline data has been collected.b)The O&amp;M system's agent capability is enabled and has the</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">necessary tools access permissions.c) The test system has been configured.</td>
+              <td class="text-left" rowspan="1" colspan="1"> </td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Test Step</td>
+              <td class="text-left" rowspan="1" colspan="1">a) Request Initiation: The test script simulates a user or upper-layer agent, initiating requests via natural language or structured APIs b) Interaction Process: The test system records the entire execution process of the agent and changes in network status, including the agent's response content and execution results c)Result Determination: Scores are given based on the accuracy, completeness, timeliness, and security of the response content.</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Expected Results</td>
+              <td class="text-left" rowspan="1" colspan="1">Calculate the score based on Agent capability to tackle the interactive task test questions</td>
+            </tr>
+          </tbody>
+        </table>
+</section>
+</div>
+<div id="autonomous-response-task-test-requirements">
+<section id="appendix-A.3">
+        <h3 id="name-autonomous-response-task-te">
+<a href="#appendix-A.3" class="section-number selfRef">A.3. </a><a href="#name-autonomous-response-task-te" class="section-name selfRef">Autonomous Response Task Test Requirements</a>
+        </h3>
+<p id="appendix-A.3-1">The Test requirements for Campus Network Operation Agent scenario is shown as follows:<a href="#appendix-A.3-1" class="pilcrow">¶</a></p>
+<span id="name-interactive-qa-test-system-"></span><div id="campus-interact">
+<table class="center" id="table-3">
           <caption>
-<a href="#table-2" class="selfRef">Table 2</a>:
+<a href="#table-3" class="selfRef">Table 3</a>:
 <a href="#name-interactive-qa-test-system-" class="selfRef">Interactive Q&amp;A Test System Requirements</a>
           </caption>
 <thead>
@@ -1877,18 +1920,11 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Expected Results</td>
-              <td class="text-left" rowspan="1" colspan="1">Calculate the score based on the agent capability to tackle the responsive task test questions</td>
+              <td class="text-left" rowspan="1" colspan="1">Calculate the score based on the agent capability to tackle the Responsive task test questions</td>
             </tr>
           </tbody>
         </table>
 </div>
-</section>
-</div>
-<div id="autonomous-response-task-test-requirements">
-<section id="appendix-A.3">
-        <h3 id="name-autonomous-response-task-te">
-<a href="#appendix-A.3" class="section-number selfRef">A.3. </a><a href="#name-autonomous-response-task-te" class="section-name selfRef">Autonomous Response Task Test Requirements</a>
-      </h3>
 </section>
 </div>
 </section>
@@ -1957,9 +1993,9 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
           </figcaption></figure>
 </div>
 <span id="name-test-system-configuration-re"></span><div id="tab-dctest-config">
-<table class="center" id="table-3">
+<table class="center" id="table-4">
           <caption>
-<a href="#table-3" class="selfRef">Table 3</a>:
+<a href="#table-4" class="selfRef">Table 4</a>:
 <a href="#name-test-system-configuration-re" class="selfRef">Test System Configuration Requirements</a>
           </caption>
 <thead>
@@ -2014,12 +2050,19 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
 <section id="appendix-B.2">
         <h3 id="name-interactive-qa-task-test-req">
 <a href="#appendix-B.2" class="section-number selfRef">B.2. </a><a href="#name-interactive-qa-task-test-req" class="section-name selfRef">Interactive Q&amp;A Task Test Requirements</a>
+      </h3>
+</section>
+</div>
+<div id="autonomous-response-task-test-requirements-1">
+<section id="appendix-B.3">
+        <h3 id="name-autonomous-response-task-tes">
+<a href="#appendix-B.3" class="section-number selfRef">B.3. </a><a href="#name-autonomous-response-task-tes" class="section-name selfRef">Autonomous Response Task Test Requirements</a>
         </h3>
-<p id="appendix-B.2-1">The test set is defined based on the scenario definition for Campus Network Operation Agent. The Test requirements is shown as follows:<a href="#appendix-B.2-1" class="pilcrow">¶</a></p>
+<p id="appendix-B.3-1">The Test requirements for Data Center Network Operation Agent Scenario is shown as follows:<a href="#appendix-B.3-1" class="pilcrow">¶</a></p>
 <span id="name-interactive-qa-test-system-r"></span><div id="dc-interact">
-<table class="center" id="table-4">
+<table class="center" id="table-5">
           <caption>
-<a href="#table-4" class="selfRef">Table 4</a>:
+<a href="#table-5" class="selfRef">Table 5</a>:
 <a href="#name-interactive-qa-test-system-r" class="selfRef">Interactive Q&amp;A Test System Requirements</a>
           </caption>
 <thead>
@@ -2052,13 +2095,6 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
           </tbody>
         </table>
 </div>
-</section>
-</div>
-<div id="autonomous-response-task-test-requirements-1">
-<section id="appendix-B.3">
-        <h3 id="name-autonomous-response-task-tes">
-<a href="#appendix-B.3" class="section-number selfRef">B.3. </a><a href="#name-autonomous-response-task-tes" class="section-name selfRef">Autonomous Response Task Test Requirements</a>
-      </h3>
 </section>
 </div>
 </section>
