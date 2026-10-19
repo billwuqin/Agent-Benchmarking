@@ -705,6 +705,24 @@ B.1.  Network Topology Test Requirements
 
 B.2.  Interactive Q&A Task Test Requirements
 
+   The test set is defined based on the scenario definition for Campus
+   Network Operation Agent.  The Test requirements is shown as follows:
+
+     +=============+=================================================+
+     | Test        | Verify the ability of agents to autonomously    |
+     | Objective   | perceive, analyze, and handle network anomalies |
+     |             | without human intervention                      |
+     +=============+=================================================+
+     | Test Case   | Cover scenarios such as fault and optimization. |
+     | Requirement | Each scenario should cover different difficulty |
+     |             | levels from T1 to T3 (basic-medium-hard).       |
+     +-------------+-------------------------------------------------+
+     | Test Topo   | Refer to dc topo to select typical network      |
+     |             | deployment scenarios such as finance            |
+     +-------------+-------------------------------------------------+
+
+             Table 4: Interactive Q&A Test System Requirements
+
 B.3.  Autonomous Response Task Test Requirements
 
 Author's Address
