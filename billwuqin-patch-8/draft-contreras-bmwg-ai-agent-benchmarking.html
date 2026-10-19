@@ -1233,7 +1233,7 @@ network environments.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13">
-            <p id="section-toc.1-1.13.1"><a href="#appendix-B" class="auto internal xref">Appendix B</a>.  <a href="#name-data-center-network-operati" class="internal xref">Data Center Network Operation Agent Test Method</a></p>
+            <p id="section-toc.1-1.13.1"><a href="#appendix-B" class="auto internal xref">Appendix B</a>.  <a href="#name-data-center-network-operati" class="internal xref">Data Center Network Operation Agent Test Requirements</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13.2.1">
                 <p id="section-toc.1-1.13.2.1.1"><a href="#appendix-B.1" class="auto internal xref">B.1</a>.  <a href="#name-network-topology-test-requir" class="internal xref">Network Topology Test Requirements</a></p>
@@ -1893,11 +1893,14 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
 </div>
 </section>
 </div>
-<div id="data-center-network-operation-agent-test-method">
+<div id="data-center-network-operation-agent-test-requirements">
 <section id="appendix-B">
       <h2 id="name-data-center-network-operati">
-<a href="#appendix-B" class="section-number selfRef">Appendix B. </a><a href="#name-data-center-network-operati" class="section-name selfRef">Data Center Network Operation Agent Test Method</a>
+<a href="#appendix-B" class="section-number selfRef">Appendix B. </a><a href="#name-data-center-network-operati" class="section-name selfRef">Data Center Network Operation Agent Test Requirements</a>
       </h2>
+<p id="appendix-B-1">The data center network operation agent test needs to support a typical test network topology
+as shown in <a href="#dctopo" class="auto internal xref">Figure 2</a>, including the network device layer, operation and maintenance
+management system, AI agent module, and AI agent test system.<a href="#appendix-B-1" class="pilcrow">¶</a></p>
 <div id="network-topology-test-requirements-1">
 <section id="appendix-B.1">
         <h3 id="name-network-topology-test-requir">
@@ -1952,6 +1955,58 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
 <figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
 <a href="#name-data-center-network-operatio" class="selfRef">Data Center Network Operation Test Agent Network Topology</a>
           </figcaption></figure>
+</div>
+<span id="name-test-system-configuration-re"></span><div id="tab-dctest-config">
+<table class="center" id="table-3">
+          <caption>
+<a href="#table-3" class="selfRef">Table 3</a>:
+<a href="#name-test-system-configuration-re" class="selfRef">Test System Configuration Requirements</a>
+          </caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Test Config</th>
+              <th class="text-left" rowspan="1" colspan="1">Category</th>
+              <th class="text-left" rowspan="1" colspan="1">Config Capabilities</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">network element</td>
+              <td class="text-left" rowspan="1" colspan="1">spine and leaf switch</td>
+              <td class="text-left" rowspan="1" colspan="1">The network topology includes 2 Spine nodes, 4 Server Leaf nodes, and 2 Border Leaf nodes.</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Constraints: The basic configuration uses OSPF Area 0 in the core layer, Area 1/2 in the aggregation layer, and static routing in some peripheral networks; supports BGP, EVPN, and VXLAN; all network devices support Telemetry technology with a sampling interval of no more than 10 seconds, covering all dimensions of indicators including interfaces, traffic, protocols, and performance; firewalls, load balancers, and egress routers can be added.</td>
+              <td class="text-left" rowspan="1" colspan="1"> </td>
+              <td class="text-left" rowspan="1" colspan="1"> </td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Network Operation Agent</td>
+              <td class="text-left" rowspan="1" colspan="1">O&amp;M Management System</td>
+              <td class="text-left" rowspan="1" colspan="1">Support configuration distribution, state monitoring, and fault handling through the existing management system</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Network Operation Large Model</td>
+              <td class="text-left" rowspan="1" colspan="1">LLM</td>
+              <td class="text-left" rowspan="1" colspan="1">Identify the model vendor, version, and number of parameters and deployed model locally to ensure data remains within the domain</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Network Operation Agent Hardware Platform</td>
+              <td class="text-left" rowspan="1" colspan="1">Hardware Platform</td>
+              <td class="text-left" rowspan="1" colspan="1">GPU/NPU Model and Number</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">Agetn Test System</td>
+              <td class="text-left" rowspan="1" colspan="1">Test Sytem</td>
+              <td class="text-left" rowspan="1" colspan="1">simulate scenarios such as traffic peaks and sudden surges with mixed east-west and north-south traffic using a professional traffic testing instrument</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">collect agent operation information and produce test results</td>
+              <td class="text-left" rowspan="1" colspan="1"> </td>
+              <td class="text-left" rowspan="1" colspan="1"> </td>
+            </tr>
+          </tbody>
+        </table>
 </div>
 </section>
 </div>
