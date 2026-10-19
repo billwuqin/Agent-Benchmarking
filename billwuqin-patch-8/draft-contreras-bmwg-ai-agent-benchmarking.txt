@@ -525,6 +525,10 @@ A.2.  Interactive Q&A Task Test Requirements
      |             | deployment scenarios such as smart classroom or |
      |             | dormitory                                       |
      +-------------+-------------------------------------------------+
+     | Expected    | Calculate the score based on the agent          |
+     | Results     | capability to tackle the responsive task test   |
+     |             | questions                                       |
+     +-------------+-------------------------------------------------+
 
              Table 2: Interactive Q&A Test System Requirements
 
