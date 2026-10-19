@@ -501,6 +501,15 @@ collect agent operation information and produce test results|
 
 ## Interactive Q&A Task Test Requirements
 
+The Test requirements for Data Center Network Operation Agent scenario is shown as follows:
+
+| Test Objective | Verify the comprehensive processing capabilities for tasks such as configuration changes and troubleshooting queries in human-machine or machine-to-machine interaction scenarios, and evaluate the accuracy of task completion, interaction efficiency, and security compliance|
+|---|---|
+|Test Case Requirements|Cover at least three scenarios: information query, fault diagnosis, and configuration change. Each scenario must have at least five test cases (including normal requests and malicious requests for security testing), covering different difficulty levels from T1 to T3 (basic, medium, and hard).|
+|Test Topo|Refer to data center topo to select typical network deployment scenarios such as finance|
+|Preset Condition|a)The network environment is running stably, and baseline data has been collected b)The O&M system's agent capability is enabled and has the necessary tools access permissions c) The test system has been configured d) The agent's context window must be cleared before each test case begins e) Each test case is based on the standard natural language Prompt library and structured API request templates|
+|Test Step|a) Enter the agent testing interface b) Initiate a request: The test script simulates a user or upper-layer agent, initiating requests via natural language or structured APIs c) Interaction process: The test system records the entire execution process of the agent and network status changes, including the agent's response content, execution results, interaction rounds, number of error messages, over-budget follow-up queries, task completion time, and security violations d) Result Evaluation: Based on the interactive task scoring criteria, the accuracy, completeness, timeliness, and security of the interaction content are scored|
+|Expected Results|Calculate the score based on the agent capability to tackle the interactive task test questions.For example, accuracy: whether the final configuration or diagnostic conclusion is correct; efficiency: fewer interaction rounds and shorter time consumption result in higher scores; security: no security violations throughout the process; output process: readability and logical clarity of responses|
 
 ## Autonomous Response Task Test Requirements
 
