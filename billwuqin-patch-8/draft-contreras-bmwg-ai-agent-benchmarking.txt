@@ -539,7 +539,18 @@ A.2.  Interactive Q&A Task Test Requirements
      +-----------------------+---------------------------------------+
      | Test Step             | a) Triggering Event: Pre-set network  |
      |                       | anomaly events are required for       |
-     |                       | constructing test cases.              |
+     |                       | constructing test cases.b)Autonomous  |
+     |                       | Execution: The agent automatically    |
+     |                       | perceives                             |
+     +-----------------------+---------------------------------------+
+     | the event and         |                                       |
+     | executes inference    |                                       |
+     | and handling          |                                       |
+     | procedures.           |                                       |
+     +-----------------------+---------------------------------------+
+     | Expected Results      | Calculate the score based on the      |
+     |                       | agent capability to tackle the        |
+     |                       | responsive task test questions        |
      +-----------------------+---------------------------------------+
 
              Table 2: Interactive Q&A Test System Requirements
