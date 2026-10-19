@@ -418,9 +418,9 @@ The test set is defined based on the scenario definition for Campus Network Oper
 |Test Topo|Refer to campus topo to select typical network deployment scenarios such as smart classroom or dormitory|
 |Pre-set Condition|a) The network environment is running stably, and baseline data has been collected.b) The O&M system's agent capability is enabled and has the
 necessary tools access permissions.c) The test system has been configured.|
-|Test Step|a) Triggering Event: Pre-set network anomaly events are required for constructing test cases.b)Autonomous Execution: The agent automatically perceives
-the event and executes inference and handling procedures.c) Data Acquisition: The test system records the agent's execution process and network state changes
-throughout the entire process.d) Result Determination: The final network state is compared with the expected state to calculate the task score.|
+|Test Step|(1) Triggering Event: Pre-set network anomaly events are required for constructing test cases.(2)Autonomous Execution: The agent automatically perceives
+the event and executes inference and handling procedures.(3) Data Acquisition: The test system records the agent's execution process and network state changes
+throughout the entire process.(4) Result Determination: The final network state is compared with the expected state to calculate the task score.|
 |Expected Results|Calculate the score based on the agent capability to tackle the responsive task test questions|
 {: #campus-interact title="Interactive Q&A Test System Requirements"}
 
