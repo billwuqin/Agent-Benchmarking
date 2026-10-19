@@ -512,23 +512,35 @@ A.2.  Interactive Q&A Task Test Requirements
    The test set is defined based on the scenario definition for Campus
    Network Operation Agent.  The Test requirements is shown as follows:
 
-     +=============+=================================================+
-     | Test        | Verify the ability of agents to autonomously    |
-     | Objective   | perceive, analyze, and handle network anomalies |
-     |             | without human intervention                      |
-     +=============+=================================================+
-     | Test Case   | Cover scenarios such as fault and optimization. |
-     | Requirement | Each scenario should cover different difficulty |
-     |             | levels from T1 to T3 (basic-medium-hard).       |
-     +-------------+-------------------------------------------------+
-     | Test Topo   | Refer to campus topo to select typical network  |
-     |             | deployment scenarios such as smart classroom or |
-     |             | dormitory                                       |
-     +-------------+-------------------------------------------------+
-     | Expected    | Calculate the score based on the agent          |
-     | Results     | capability to tackle the responsive task test   |
-     |             | questions                                       |
-     +-------------+-------------------------------------------------+
+     +=======================+=======================================+
+     | Test Objective        | Verify the ability of agents to       |
+     |                       | autonomously perceive, analyze, and   |
+     |                       | handle network anomalies without      |
+     |                       | human intervention                    |
+     +=======================+=======================================+
+     | Test Case Requirement | Cover scenarios such as fault and     |
+     |                       | optimization.  Each scenario should   |
+     |                       | cover different difficulty levels     |
+     |                       | from T1 to T3 (basic-medium-hard).    |
+     +-----------------------+---------------------------------------+
+     | Test Topo             | Refer to campus topo to select        |
+     |                       | typical network deployment scenarios  |
+     |                       | such as smart classroom or dormitory  |
+     +-----------------------+---------------------------------------+
+     | Pre-set Condition     | a) The network environment is running |
+     |                       | stably, and baseline data has been    |
+     |                       | collected.b) The O&M system's agent   |
+     |                       | capability is enabled and has the     |
+     +-----------------------+---------------------------------------+
+     | necessary tools       |                                       |
+     | access permissions.c) |                                       |
+     | The test system has   |                                       |
+     | been configured.      |                                       |
+     +-----------------------+---------------------------------------+
+     | Expected Results      | Calculate the score based on the      |
+     |                       | agent capability to tackle the        |
+     |                       | responsive task test questions        |
+     +-----------------------+---------------------------------------+
 
              Table 2: Interactive Q&A Test System Requirements
 
