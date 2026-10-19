@@ -348,9 +348,9 @@ TODO acknowledge.
 
 --- back
 
-# Campus Network Operation Agent Test Method
+# Campus Network Operation Agent Test Requirements
 
-## Network Topology Requirements for the Test
+## Network Topology Test Requirements
 
 The campus network operation agent test needs to support a typical test network topology
 as shown in {{campus}}, including the network device layer, operation and maintenance
@@ -408,8 +408,28 @@ management system, AI agent module, and AI agent test system.
 collect agent operation information and produce test results|
 {: #tab-test-config title="Test System Configuration Requirements"}
 
+## Interactive Q&A Task Test Requirements
+
+The test set is defined based on the scenario definition for Campus Network Operation Agent. The Test requirements is shown as follows:
+
+| Test Objective | Verify the ability of agents to autonomously perceive, analyze, and handle network anomalies without human intervention|
+|---|---|
+|Test Case Requirement|Cover scenarios such as fault and optimization. Each scenario should cover different difficulty levels from T1 to T3 (basic-medium-hard).|
+|Test Topo|Refer to {{campus}} to select typical network deployment scenarios such as smart classroom or dormitory|
+|Pre-set Condition|a) The network environment is running stably, and baseline data has been collected.b) The O&M system's agent capability is enabled and has the necessary tools access permissions.
+c) The test system has been configured.|
+|Test Steps|a) Triggering Event: Pre-set network anomaly events are required for constructing test cases.b) Autonomous Execution: The agent automatically perceives the event and executes inference
+and handling procedures.c) Data Acquisition: The test system records the agent's execution process and network state changes throughout the entire process.d) Result Determination: The final network
+state is compared with the expected state to calculate the task score.|
+|Expected Results|Calculate the score based on the agent capability to tackle the responsive task test questions|
+{: #campus-interact title="Interactive Q&A Test System Requirements"}
+
+## Autonomous Response Task Test Requirements
+
 
 # Data Center Network Operation Agent Test Method
+
+## Network Topology Test Requirements
 
 ~~~~
              +-------------------------------+
@@ -454,3 +474,7 @@ collect agent operation information and produce test results|
  +----------------------------------------------------+
 ~~~~
 {:#dctopo title="Data Center Network Operation Test Agent Network Topology" artwork-align="center"}
+
+## Interactive Q&A Task Test Requirements
+
+## Autonomous Response Task Test Requirements
