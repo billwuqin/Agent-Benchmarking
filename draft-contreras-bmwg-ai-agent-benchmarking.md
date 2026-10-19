@@ -426,7 +426,11 @@ the event and executes inference and handling procedures c)Data Acquisition: The
 ## Autonomous Response Task Test Requirements
 
 
-# Data Center Network Operation Agent Test Method
+# Data Center Network Operation Agent Test Requirements
+
+The data center network operation agent test needs to support a typical test network topology
+as shown in {{dctopo}}, including the network device layer, operation and maintenance
+management system, AI agent module, and AI agent test system.
 
 ## Network Topology Test Requirements
 
@@ -473,6 +477,17 @@ the event and executes inference and handling procedures c)Data Acquisition: The
  +----------------------------------------------------+
 ~~~~
 {:#dctopo title="Data Center Network Operation Test Agent Network Topology" artwork-align="center"}
+
+| Test Config | Category | Config Capabilities|
+|---|---|---|
+|network element|spine and leaf switch|The network topology includes 2 Spine nodes, 4 Server Leaf nodes, and 2 Border Leaf nodes.
+Constraints: The basic configuration uses OSPF Area 0 in the core layer, Area 1/2 in the aggregation layer, and static routing in some peripheral networks; supports BGP, EVPN, and VXLAN; all network devices support Telemetry technology with a sampling interval of no more than 10 seconds, covering all dimensions of indicators including interfaces, traffic, protocols, and performance; firewalls, load balancers, and egress routers can be added.|
+|Network Operation Agent|O&M Management System|Support configuration distribution, state monitoring, and fault handling through the existing management system|
+|Network Operation Large Model|LLM|Identify the model vendor, version, and number of parameters and deployed model locally to ensure data remains within the domain|
+|Network Operation Agent Hardware Platform|Hardware Platform|GPU/NPU Model and Number|
+|Agetn Test System|Test Sytem|simulate scenarios such as traffic peaks and sudden surges with mixed east-west and north-south traffic using a professional traffic testing instrument
+collect agent operation information and produce test results|
+{: #tab-dctest-config title="Test System Configuration Requirements"}
 
 ## Interactive Q&A Task Test Requirements
 
