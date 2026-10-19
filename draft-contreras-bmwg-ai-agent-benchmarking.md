@@ -130,7 +130,9 @@ assumed the following parts being in place:
    control plane modules (e.g., SDN controller) and physical network
    comprising of network elements, emulation network comprising of
    virtual network functions, building a setup sufficiently rich so
-   as to allow non-evident tasks to be formulated.
+   as to allow non-evident tasks (e.g., task with hidden security
+   or safety policy or State Verification and Pre-checks before
+   main task execution ) to be formulated.
 
 Note that the reference network could probably need to be defined
 according to the reality of the real network in which the agents are
