@@ -497,6 +497,9 @@ The test set is defined based on the scenario definition for Campus Network Oper
 |---|---|
 |Test Case Requirement|Cover scenarios such as fault and optimization. Each scenario should cover different difficulty levels from T1 to T3 (basic-medium-hard).|
 |Test Topo|Refer to dc topo to select typical network deployment scenarios such as finance|
+|Pre-set Condition||
+|Test Step||
+|Expected Resutls|Calculate the score based on the agent capability to tackle the responsive task test questions|
 {: #dc-interact title="Interactive Q&A Test System Requirements"}
 
 
