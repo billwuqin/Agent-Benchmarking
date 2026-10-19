@@ -497,14 +497,6 @@ The test set is defined based on the scenario definition for Campus Network Oper
 |---|---|
 |Test Case Requirement|Cover scenarios such as fault and optimization. Each scenario should cover different difficulty levels from T1 to T3 (basic-medium-hard).|
 |Test Topo|Refer to dc topo to select typical network deployment scenarios such as finance|
-|Pre-set Condition|a) The network environment is running stably, network devices have been managed, baseline data has been collected, and the network status is normal.
-b) The O&M system's agent capability is enabled and has the corresponding tools access permissions.
-c) The testing system has been configured.
-d) Before each test case begins, the network environment returns to normal. Based on a unified initial configuration snapshot of the network devices, the system automatically rolls back after each test to ensure configuration consistency.|
-|Test Step|a) Triggered Events: Pre-set network anomaly events are required for constructing test cases, and the fault trigger time is recorded.
-b) Autonomous Execution: The agent automatically perceives the event and executes the reasoning and handling process.
-c) Data Acquisition: The test system records the entire agent execution process,network state changes,task completion time, whether security violations occurred, and the completeness of audit logs.
-d) Result Determination: The final network state is compared with the expected state to assess the service impact and calculate the score.|
 {: #dc-interact title="Interactive Q&A Test System Requirements"}
 
 
