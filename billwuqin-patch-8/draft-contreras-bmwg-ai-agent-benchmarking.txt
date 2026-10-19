@@ -537,6 +537,8 @@ A.2.  Interactive Q&A Task Test Requirements
      | The test system has   |                                       |
      | been configured.      |                                       |
      +-----------------------+---------------------------------------+
+     | aa                    | aa:                                   |
+     +-----------------------+---------------------------------------+
      | Expected Results      | Calculate the score based on the      |
      |                       | agent capability to tackle the        |
      |                       | responsive task test questions        |
