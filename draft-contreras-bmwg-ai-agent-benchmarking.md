@@ -348,7 +348,13 @@ TODO acknowledge.
 
 --- back
 
-# Campus Network Operation Test Method
+# Campus Network Operation Agent Test Method
+
+## Network Topology Requirements for the Test
+
+The campus network operation agent test needs to support a typical test network topology
+as shown in {{campus}}, including the network device layer, operation and maintenance
+management system, AI agent module, and AI agent test system.
 
 ~~~~
                       +-------------------------+
@@ -390,7 +396,8 @@ TODO acknowledge.
 ~~~~
 {:#campus title="Campus Network Operation Test Agent Network Topology" artwork-align="center"}
 
-# Data Center Network Operation Test Method
+
+# Data Center Network Operation Agent Test Method
 
 ~~~~
              +-------------------------------+
