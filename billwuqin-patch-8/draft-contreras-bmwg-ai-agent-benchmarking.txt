@@ -88,9 +88,14 @@ Table of Contents
    9.  IANA Considerations
    Acknowledgments
    Normative References
-   Appendix A.  Campus Network Operation Agent Test Method
-     A.1.  Network Topology Requirements for the Test
+   Appendix A.  Campus Network Operation Agent Test Requirements
+     A.1.  Network Topology Test Requirements
+     A.2.  Interactive Q&A Task Test Requirements
+     A.3.  Autonomous Response Task Test Requirements
    Appendix B.  Data Center Network Operation Agent Test Method
+     B.1.  Network Topology Test Requirements
+     B.2.  Interactive Q&A Task Test Requirements
+     B.3.  Autonomous Response Task Test Requirements
    Author's Address
 
 1.  Introduction
@@ -410,9 +415,9 @@ Normative References
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-Appendix A.  Campus Network Operation Agent Test Method
+Appendix A.  Campus Network Operation Agent Test Requirements
 
-A.1.  Network Topology Requirements for the Test
+A.1.  Network Topology Test Requirements
 
    The campus network operation agent test needs to support a typical
    test network topology as shown in Figure 1, including the network
@@ -502,7 +507,32 @@ A.1.  Network Topology Requirements for the Test
 
               Table 1: Test System Configuration Requirements
 
+A.2.  Interactive Q&A Task Test Requirements
+
+   The test set is defined based on the scenario definition for Campus
+   Network Operation Agent.  The Test requirements is shown as follows:
+
+     +=============+=================================================+
+     | Test        | Verify the ability of agents to autonomously    |
+     | Objective   | perceive, analyze, and handle network anomalies |
+     |             | without human intervention                      |
+     +=============+=================================================+
+     | Test Case   | Cover scenarios such as fault and optimization. |
+     | Requirement | Each scenario should cover different difficulty |
+     |             | levels from T1 to T3 (basic-medium-hard).       |
+     +-------------+-------------------------------------------------+
+     | Test Topo   | Refer to campus topo to select typical network  |
+     |             | deployment scenarios such as smart classroom or |
+     |             | dormitory                                       |
+     +-------------+-------------------------------------------------+
+
+             Table 2: Interactive Q&A Test System Requirements
+
+A.3.  Autonomous Response Task Test Requirements
+
 Appendix B.  Data Center Network Operation Agent Test Method
+
+B.1.  Network Topology Test Requirements
 
                        +-------------------------------+
                        | Data Center Network Operation |
@@ -546,6 +576,10 @@ Appendix B.  Data Center Network Operation Agent Test Method
            +----------------------------------------------------+
 
     Figure 2: Data Center Network Operation Test Agent Network Topology
+
+B.2.  Interactive Q&A Task Test Requirements
+
+B.3.  Autonomous Response Task Test Requirements
 
 Author's Address
 
