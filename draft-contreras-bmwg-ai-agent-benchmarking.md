@@ -497,7 +497,10 @@ The test set is defined based on the scenario definition for Campus Network Oper
 |---|---|
 |Test Case Requirement|Cover scenarios such as fault and optimization. Each scenario should cover different difficulty levels from T1 to T3 (basic-medium-hard).|
 |Test Topo|Refer to dc topo to select typical network deployment scenarios such as finance|
-|Pre-set Condition||
+|Pre-set Condition|a) The network environment is running stably with managed network devices, collected baseline data, and the normal network status.
+b) The O&M system's agent capability is enabled and has the corresponding tools access permissions.
+c) The testing system has been configured.
+d) Before each test case begins, the network environment returns to normal. Based on a unified initial configuration snapshot of the network devices, the system automatically rolls back after each test to ensure configuration consistency.|
 |Test Step||
 |Expected Resutls|Calculate the score based on the agent capability to tackle the responsive task test questions|
 {: #dc-interact title="Interactive Q&A Test System Requirements"}
