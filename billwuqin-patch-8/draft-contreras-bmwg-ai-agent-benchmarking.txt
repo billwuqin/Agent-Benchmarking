@@ -720,6 +720,15 @@ B.2.  Interactive Q&A Task Test Requirements
      | Test Topo   | Refer to dc topo to select typical network      |
      |             | deployment scenarios such as finance            |
      +-------------+-------------------------------------------------+
+     | Pre-set     |                                                 |
+     | Condition   |                                                 |
+     +-------------+-------------------------------------------------+
+     | Test Step   |                                                 |
+     +-------------+-------------------------------------------------+
+     | Expected    | Calculate the score based on the agent          |
+     | Resutls     | capability to tackle the responsive task test   |
+     |             | questions                                       |
+     +-------------+-------------------------------------------------+
 
              Table 4: Interactive Q&A Test System Requirements
 
