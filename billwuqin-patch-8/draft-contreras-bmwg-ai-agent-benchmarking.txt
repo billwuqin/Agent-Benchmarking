@@ -88,8 +88,9 @@ Table of Contents
    9.  IANA Considerations
    Acknowledgments
    Normative References
-   Appendix A.  Campus Network Operation Test Method
-   Appendix B.  Data Center Network Operation Test Method
+   Appendix A.  Campus Network Operation Agent Test Method
+     A.1.  Network Topology Requirements for the Test
+   Appendix B.  Data Center Network Operation Agent Test Method
    Author's Address
 
 1.  Introduction
@@ -409,7 +410,14 @@ Normative References
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-Appendix A.  Campus Network Operation Test Method
+Appendix A.  Campus Network Operation Agent Test Method
+
+A.1.  Network Topology Requirements for the Test
+
+   The campus network operation agent test needs to support a typical
+   test network topology as shown in Figure 1, including the network
+   device layer, operation and maintenance management system, AI agent
+   module, and AI agent test system.
 
                           +-------------------------+
                           | Campus Network Operation|
@@ -450,7 +458,7 @@ Appendix A.  Campus Network Operation Test Method
 
        Figure 1: Campus Network Operation Test Agent Network Topology
 
-Appendix B.  Data Center Network Operation Test Method
+Appendix B.  Data Center Network Operation Agent Test Method
 
                        +-------------------------------+
                        | Data Center Network Operation |
