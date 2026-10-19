@@ -537,11 +537,9 @@ A.2.  Interactive Q&A Task Test Requirements
      | The test system has   |                                       |
      | been configured.      |                                       |
      +-----------------------+---------------------------------------+
-     | aa                    | aa:                                   |
-     +-----------------------+---------------------------------------+
-     | Expected Results      | Calculate the score based on the      |
-     |                       | agent capability to tackle the        |
-     |                       | responsive task test questions        |
+     | Test Step             | a) Triggering Event: Pre-set network  |
+     |                       | anomaly events are required for       |
+     |                       | constructing test cases.              |
      +-----------------------+---------------------------------------+
 
              Table 2: Interactive Q&A Test System Requirements
