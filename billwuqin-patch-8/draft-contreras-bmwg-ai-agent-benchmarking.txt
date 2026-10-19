@@ -458,6 +458,50 @@ A.1.  Network Topology Requirements for the Test
 
        Figure 1: Campus Network Operation Test Agent Network Topology
 
+   +================+============+=====================================+
+   | Test Config    | Category   | Config Capabilities                 |
+   +================+============+=====================================+
+   | SUT            | Mobile     | 2.4G Access,5G Access               |
+   |                | Phone/     |                                     |
+   |                | Laptop     |                                     |
+   +----------------+------------+-------------------------------------+
+   | Network        | WLAN AP    | Telemetry Support                   |
+   | Element        |            |                                     |
+   +----------------+------------+-------------------------------------+
+   | Network        | Switch     | Telemetry Support                   |
+   | Element        |            |                                     |
+   +----------------+------------+-------------------------------------+
+   | Network        | O&M        | Support configuration distribution, |
+   | Operation      | Management | state monitoring, and fault         |
+   | Agent          | System     | handling through the existing       |
+   |                |            | management system                   |
+   +----------------+------------+-------------------------------------+
+   | Network        | LLM        | Identify the model vendor, version, |
+   | Operation      |            | and number of parameters and        |
+   | Large Model    |            | deployed model locally to ensure    |
+   |                |            | data remains within the domain      |
+   +----------------+------------+-------------------------------------+
+   | Network        | Hardware   | GPU/NPU Model and Number            |
+   | Operation      | Platform   |                                     |
+   | Agent          |            |                                     |
+   | Hardware       |            |                                     |
+   | Platform       |            |                                     |
+   +----------------+------------+-------------------------------------+
+   | Agetn Test     | Test Sytem | simulate scenarios such as traffic  |
+   | System         |            | peaks and sudden surges with mixed  |
+   |                |            | east-west and north-south traffic   |
+   |                |            | using a professional traffic        |
+   |                |            | testing instrument                  |
+   +----------------+------------+-------------------------------------+
+   | collect agent  |            |                                     |
+   | operation      |            |                                     |
+   | information    |            |                                     |
+   | and produce    |            |                                     |
+   | test results   |            |                                     |
+   +----------------+------------+-------------------------------------+
+
+              Table 1: Test System Configuration Requirements
+
 Appendix B.  Data Center Network Operation Agent Test Method
 
                        +-------------------------------+
