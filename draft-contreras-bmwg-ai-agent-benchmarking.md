@@ -348,7 +348,7 @@ TODO acknowledge.
 
 --- back
 
-# Campus Network Operation Agent Test Requirements
+# Campus Network Operation Agent Test Usage Example
 
 ## Network Topology Test Requirements
 
@@ -398,14 +398,12 @@ management system, AI agent module, and AI agent test system.
 
 | Test Config | Category | Config Capabilities|
 |---|---|---|
-|SUT|Mobile Phone/Laptop|2.4G Access,5G Access|
-|Network Element|WLAN AP|Telemetry Support|
-|Network Element|Switch|Telemetry Support|
-|Network Operation Agent|O&M Management System|Support configuration distribution, state monitoring, and fault handling through the existing management system|
-|Network Operation Large Model|LLM|Identify the model vendor, version, and number of parameters and deployed model locally to ensure data remains within the domain|
-|Network Operation Agent Hardware Platform|Hardware Platform|GPU/NPU Model and Number|
-|Agetn Test System|Test Sytem|simulate scenarios such as traffic peaks and sudden surges with mixed east-west and north-south traffic using a professional traffic testing instrument
-collect agent operation information and produce test results|
+|End Device|Mobile Phone/Laptop|2.4G Access,5G Access|
+|Network Element|WLAN AP/Switch|Telemetry Support|
+|Network Operation Agent|O&M Management System|Configuration, Monitoring, Fault Management using existing Management System|
+|Network Operation Large Model|LLM|Model Name, Version, Size Local deployment close to the data|
+|Network Operation Agent Hardware Platform|Hardware|GPU/NPU Name and Number|
+|SUT|Test Sytem|Simulate traffic peaks and burst with mixed east-west traffic and north-south traffic|
 {: #tab-test-config title="Test System Configuration Requirements"}
 
 ## Interactive Q&A Task Test Requirements
