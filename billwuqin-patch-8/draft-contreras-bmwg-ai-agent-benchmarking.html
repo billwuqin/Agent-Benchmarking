@@ -1233,7 +1233,7 @@ network environments.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13">
-            <p id="section-toc.1-1.13.1"><a href="#appendix-B" class="auto internal xref">Appendix B</a>.  <a href="#name-data-center-network-operati" class="internal xref">Data Center Network Operation Agent Test Requirements</a></p>
+            <p id="section-toc.1-1.13.1"><a href="#appendix-B" class="auto internal xref">Appendix B</a>.  <a href="#name-data-center-network-operati" class="internal xref">Data Center Network Operation Agent Test Usage Example</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13.2.1">
                 <p id="section-toc.1-1.13.2.1.1"><a href="#appendix-B.1" class="auto internal xref">B.1</a>.  <a href="#name-network-topology-test-requir" class="internal xref">Network Topology Test Requirements</a></p>
@@ -1909,10 +1909,10 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
 </div>
 </section>
 </div>
-<div id="data-center-network-operation-agent-test-requirements">
+<div id="data-center-network-operation-agent-test-usage-example">
 <section id="appendix-B">
       <h2 id="name-data-center-network-operati">
-<a href="#appendix-B" class="section-number selfRef">Appendix B. </a><a href="#name-data-center-network-operati" class="section-name selfRef">Data Center Network Operation Agent Test Requirements</a>
+<a href="#appendix-B" class="section-number selfRef">Appendix B. </a><a href="#name-data-center-network-operati" class="section-name selfRef">Data Center Network Operation Agent Test Usage Example</a>
       </h2>
 <p id="appendix-B-1">The data center network operation agent test needs to support a typical test network topology
 as shown in <a href="#dctopo" class="auto internal xref">Figure 2</a>, including the network device layer, operation and maintenance
@@ -1988,38 +1988,28 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
           <tbody>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">network element</td>
-              <td class="text-left" rowspan="1" colspan="1">spine and leaf switch</td>
-              <td class="text-left" rowspan="1" colspan="1">The network topology includes 2 Spine nodes, 4 Server Leaf nodes, and 2 Border Leaf nodes.</td>
-            </tr>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">Constraints: The basic configuration uses OSPF Area 0 in the core layer, Area 1/2 in the aggregation layer, and static routing in some peripheral networks; supports BGP, EVPN, and VXLAN; all network devices support Telemetry technology with a sampling interval of no more than 10 seconds, covering all dimensions of indicators including interfaces, traffic, protocols, and performance; firewalls, load balancers, and egress routers can be added.</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
+              <td class="text-left" rowspan="1" colspan="1">Spine and Leaf Switches</td>
+              <td class="text-left" rowspan="1" colspan="1">Network topo: 2 Spine nodes, 4 Server Leaf nodes, 2 Border leaf nodes;Constraints:Support BGP EVPN VXLAN with static route at the end system;Telemetry on interface, traffic, protocol performance with &lt;10 sample interval;OSPF area 0 at the core, area 1/2 at agg with FW, LB, egress router support;</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Network Operation Agent</td>
-              <td class="text-left" rowspan="1" colspan="1">O&amp;M Management System</td>
-              <td class="text-left" rowspan="1" colspan="1">Support configuration distribution, state monitoring, and fault handling through the existing management system</td>
+              <td class="text-left" rowspan="1" colspan="1">Management System</td>
+              <td class="text-left" rowspan="1" colspan="1">Configuration, Monitoring, Fault Management using existing Management System</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Network Operation Large Model</td>
               <td class="text-left" rowspan="1" colspan="1">LLM</td>
-              <td class="text-left" rowspan="1" colspan="1">Identify the model vendor, version, and number of parameters and deployed model locally to ensure data remains within the domain</td>
+              <td class="text-left" rowspan="1" colspan="1">Model Name, Version, Size;Local deployment close to the data</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Network Operation Agent Hardware Platform</td>
-              <td class="text-left" rowspan="1" colspan="1">Hardware Platform</td>
-              <td class="text-left" rowspan="1" colspan="1">GPU/NPU Model and Number</td>
+              <td class="text-left" rowspan="1" colspan="1">Hardware</td>
+              <td class="text-left" rowspan="1" colspan="1">GPU/NPU Name and Number</td>
             </tr>
             <tr>
-              <td class="text-left" rowspan="1" colspan="1">Agetn Test System</td>
+              <td class="text-left" rowspan="1" colspan="1">SUT</td>
               <td class="text-left" rowspan="1" colspan="1">Test Sytem</td>
-              <td class="text-left" rowspan="1" colspan="1">simulate scenarios such as traffic peaks and sudden surges with mixed east-west and north-south traffic using a professional traffic testing instrument</td>
-            </tr>
-            <tr>
-              <td class="text-left" rowspan="1" colspan="1">collect agent operation information and produce test results</td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
-              <td class="text-left" rowspan="1" colspan="1"> </td>
+              <td class="text-left" rowspan="1" colspan="1">Simulate traffic peaks and burst with mixed east-west traffic and north-south traffic</td>
             </tr>
           </tbody>
         </table>
