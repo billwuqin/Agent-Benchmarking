@@ -4,8 +4,8 @@
 
 Benchmarking Methodology                                 L. M. Contreras
 Internet-Draft                                                Telefonica
-Intended status: Informational                           19 October 2026
-Expires: 22 April 2027
+Intended status: Informational                           23 October 2026
+Expires: 26 April 2027
 
 
       Benchmarking Methodology for AI Agents in Network Operations
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 April 2027.
+   This Internet-Draft will expire on 26 April 2027.
 
 Copyright Notice
 
@@ -88,7 +88,7 @@ Table of Contents
    9.  IANA Considerations
    Acknowledgments
    Normative References
-   Appendix A.  Campus Network Operation Agent Test Requirements
+   Appendix A.  Campus Network Operation Agent Test Usage Example
      A.1.  Network Topology Test Requirements
      A.2.  Interactive Q&A Task Test Requirements
      A.3.  Autonomous Response Task Test Requirements
@@ -415,7 +415,7 @@ Normative References
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-Appendix A.  Campus Network Operation Agent Test Requirements
+Appendix A.  Campus Network Operation Agent Test Usage Example
 
 A.1.  Network Topology Test Requirements
 
@@ -463,49 +463,33 @@ A.1.  Network Topology Test Requirements
 
        Figure 1: Campus Network Operation Test Agent Network Topology
 
-   +================+============+=====================================+
-   | Test Config    | Category   | Config Capabilities                 |
-   +================+============+=====================================+
-   | SUT            | Mobile     | 2.4G Access,5G Access               |
-   |                | Phone/     |                                     |
-   |                | Laptop     |                                     |
-   +----------------+------------+-------------------------------------+
-   | Network        | WLAN AP    | Telemetry Support                   |
-   | Element        |            |                                     |
-   +----------------+------------+-------------------------------------+
-   | Network        | Switch     | Telemetry Support                   |
-   | Element        |            |                                     |
-   +----------------+------------+-------------------------------------+
-   | Network        | O&M        | Support configuration distribution, |
-   | Operation      | Management | state monitoring, and fault         |
-   | Agent          | System     | handling through the existing       |
-   |                |            | management system                   |
-   +----------------+------------+-------------------------------------+
-   | Network        | LLM        | Identify the model vendor, version, |
-   | Operation      |            | and number of parameters and        |
-   | Large Model    |            | deployed model locally to ensure    |
-   |                |            | data remains within the domain      |
-   +----------------+------------+-------------------------------------+
-   | Network        | Hardware   | GPU/NPU Model and Number            |
-   | Operation      | Platform   |                                     |
-   | Agent          |            |                                     |
-   | Hardware       |            |                                     |
-   | Platform       |            |                                     |
-   +----------------+------------+-------------------------------------+
-   | Agetn Test     | Test Sytem | simulate scenarios such as traffic  |
-   | System         |            | peaks and sudden surges with mixed  |
-   |                |            | east-west and north-south traffic   |
-   |                |            | using a professional traffic        |
-   |                |            | testing instrument                  |
-   +----------------+------------+-------------------------------------+
-   | collect agent  |            |                                     |
-   | operation      |            |                                     |
-   | information    |            |                                     |
-   | and produce    |            |                                     |
-   | test results   |            |                                     |
-   +----------------+------------+-------------------------------------+
+   +===================+============+=================================+
+   | Test Config       | Category   | Config Capabilities             |
+   +===================+============+=================================+
+   | End Device        | Mobile     | 2.4G Access,5G Access           |
+   |                   | Phone/     |                                 |
+   |                   | Laptop     |                                 |
+   +-------------------+------------+---------------------------------+
+   | Network Element   | WLAN AP/   | Telemetry Support               |
+   |                   | Switch     |                                 |
+   +-------------------+------------+---------------------------------+
+   | Network Operation | O&M        | Configuration, Monitoring,      |
+   | Agent             | Management | Fault Management using existing |
+   |                   | System     | Management System               |
+   +-------------------+------------+---------------------------------+
+   | Network Operation | LLM        | Model Name, Version, Size Local |
+   | Large Model       |            | deployment close to the data    |
+   +-------------------+------------+---------------------------------+
+   | Network Operation | Hardware   | GPU/NPU Name and Number         |
+   | Agent Hardware    |            |                                 |
+   | Platform          |            |                                 |
+   +-------------------+------------+---------------------------------+
+   | SUT               | Test Sytem | Simulate traffic peaks and      |
+   |                   |            | burst with mixed east-west      |
+   |                   |            | traffic and north-south traffic |
+   +-------------------+------------+---------------------------------+
 
-              Table 1: Test System Configuration Requirements
+             Table 1: Test System Configuration Requirements
 
 A.2.  Interactive Q&A Task Test Requirements
 
