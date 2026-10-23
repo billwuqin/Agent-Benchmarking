@@ -2027,29 +2027,29 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
 <thead>
             <tr>
               <th class="text-left" rowspan="1" colspan="1">Test Objective</th>
-              <th class="text-left" rowspan="1" colspan="1">Verify the comprehensive processing capabilities for tasks such as configuration changes and troubleshooting queries in human-machine or machine-to-machine interaction scenarios, and evaluate the accuracy of task completion, interaction efficiency, and security compliance</th>
+              <th class="text-left" rowspan="1" colspan="1">Evaluate accuracy, efficiency and security compliance;Task management Capabilities such as fault management, change management in M2M or human and machine dialogue</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Test Case Requirements</td>
-              <td class="text-left" rowspan="1" colspan="1">Cover at least three scenarios: information query, fault diagnosis, and configuration change. Each scenario must have at least five test cases (including normal requests and malicious requests for security testing), covering different difficulty levels from T1 to T3 (basic, medium, and hard).</td>
+              <td class="text-left" rowspan="1" colspan="1">Support fault management, change management, Q&amp;A Dialogue;Support &gt;5 test cases with normal request, malicious request, security testing request;difficulty level coverage(Basic, Medium, complex)</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Test Topo</td>
-              <td class="text-left" rowspan="1" colspan="1">Refer to data center topo to select typical network deployment scenarios such as finance</td>
+              <td class="text-left" rowspan="1" colspan="1">DC deployment such as Finance DC</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Preset Condition</td>
-              <td class="text-left" rowspan="1" colspan="1">a)The network environment is running stably, and baseline data has been collected b)The O&amp;M system's agent capability is enabled and has the necessary tools access permissions c) The test system has been configured d) The agent's context window must be cleared before each test case begins e) Each test case is based on the standard natural language Prompt library and structured API request templates</td>
+              <td class="text-left" rowspan="1" colspan="1">The Network Environment has been setup with Collected observability data;Test system has been configured;Agent is enabled with the tools access permission;Context window cleared before test;Standard structured API Request template and prompt library;</td>
             </tr>
             <tr>
-              <td class="text-left" rowspan="1" colspan="1">Test Step</td>
-              <td class="text-left" rowspan="1" colspan="1">a) Enter the agent testing interface b) Initiate a request: The test script simulates a user or upper-layer agent, initiating requests via natural language or structured APIs c) Interaction process: The test system records the entire execution process of the agent and network status changes, including the agent's response content, execution results, interaction rounds, number of error messages, over-budget follow-up queries, task completion time, and security violations d) Result Evaluation: Based on the interactive task scoring criteria, the accuracy, completeness, timeliness, and security of the interaction content are scored</td>
+              <td class="text-left" rowspan="1" colspan="1">Test Procedure</td>
+              <td class="text-left" rowspan="1" colspan="1">Log into Agent Test UI;Initiate Request;Interaction with tools, agents, LLM model;Score computing based on accuracy, completeness, efficiency, security</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Expected Results</td>
-              <td class="text-left" rowspan="1" colspan="1">Calculate the score based on the agent capability to tackle the interactive task test questions.For example, accuracy: whether the final configuration or diagnostic conclusion is correct; efficiency: fewer interaction rounds and shorter time consumption result in higher scores; security: no security violations throughout the process; output process: readability and logical clarity of responses</td>
+              <td class="text-left" rowspan="1" colspan="1">Score based on capability to tackle O&amp;A interactive task test questions</td>
             </tr>
           </tbody>
         </table>
@@ -2070,29 +2070,29 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
 <thead>
             <tr>
               <th class="text-left" rowspan="1" colspan="1">Test Objective</th>
-              <th class="text-left" rowspan="1" colspan="1">Verify the ability of agents to autonomously perceive, analyze, and handle network anomalies without human intervention</th>
+              <th class="text-left" rowspan="1" colspan="1">Verify the Capability of agents to autonomously perceive, analyze, and tackle network anomalies without human intervention</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Test Case Requirement</td>
-              <td class="text-left" rowspan="1" colspan="1">Cover scenarios such as fault and optimization. Each scenario should cover different difficulty levels from T1 to T3 (basic-medium-hard).</td>
+              <td class="text-left" rowspan="1" colspan="1">Support Fault management and Quality Optimization;3 difficulty level (Basic, Medium, Complex) coverage</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Test Topo</td>
-              <td class="text-left" rowspan="1" colspan="1">Refer to dc topo to select typical network deployment scenarios such as finance</td>
+              <td class="text-left" rowspan="1" colspan="1">DC deployment such as Finance DC</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Pre-set Condition</td>
-              <td class="text-left" rowspan="1" colspan="1">a) The network environment is running stably with managed network devices, collected baseline data, and the normal network status b) The O&amp;M system's agent capability is enabled and has the corresponding tools access permissions c) The testing system has been configured d) Before each test case begins, the network environment returns to normal. Based on a unified initial configuration snapshot of the network devices, the system automatically rolls back after each test to ensure configuration consistency</td>
+              <td class="text-left" rowspan="1" colspan="1">The Network Environment has been setup with Collected observability data;Test system has been configured;Agent is enabled with the tools access permission;Roll back to initial configuration in the network environment setting</td>
             </tr>
             <tr>
-              <td class="text-left" rowspan="1" colspan="1">Test Step</td>
-              <td class="text-left" rowspan="1" colspan="1">a) Triggered Events: Pre-set network anomaly events are required for constructing test cases, and the fault trigger time is recorded b) Autonomous Execution: The agent automatically perceives the event and executes the reasoning and handling process c) Data Acquisition: The test system records the entire agent execution process,network state changes,task completion time, whether security violations occurred, and the completeness of audit logs d) Result Determination: The final network state is compared with the expected state to assess the service impact and calculate the score</td>
+              <td class="text-left" rowspan="1" colspan="1">Test Procedure</td>
+              <td class="text-left" rowspan="1" colspan="1">Inject fault and record the time;Autonomous fault management operation with perceived event;Observability data collection including security compliance and log integrity;Score based on comparison  between operation state and intent state</td>
             </tr>
             <tr>
-              <td class="text-left" rowspan="1" colspan="1">Expected Resutls</td>
-              <td class="text-left" rowspan="1" colspan="1">Calculate the score based on the agent capability to tackle the responsive task test questions</td>
+              <td class="text-left" rowspan="1" colspan="1">Expected Results</td>
+              <td class="text-left" rowspan="1" colspan="1">Score base on capability to tackle response task test questions</td>
             </tr>
           </tbody>
         </table>
