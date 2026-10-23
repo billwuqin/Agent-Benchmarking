@@ -410,14 +410,13 @@ management system, AI agent module, and AI agent test system.
 
 The Test requirements for Campus Network Operation Agent scenario is shown as follows:
 
-| Test Objective | Verify the ability to understand intent, retrieve knowledge, and assist in execution in human-machine dialogue or machine-machine interaction scenarios.|
+| Test Objective | Verify the Capability to understand intent, retrieve knowledge, assist in task execution in m2m or human to machine dialog |
 |---|---|
-|Test Case Requirements|Cover at least three scenarios: information query, fault diagnosis, and configuration change. Each scenario must have at least three test cases (including normal requests and malicious requests for security testing), covering different difficulty levels from T1 to T3 (basic, medium, and hard).|
-|Test Topo|Refer to campus topo to select typical network deployment scenarios such as smart classroom or dormitory|
-|Preset Condition|a)The network environment is running stably, and baseline data has been collected.b)The O&M system's agent capability is enabled and has the
-necessary tools access permissions.c) The test system has been configured.|
-|Test Step|a) Request Initiation: The test script simulates a user or upper-layer agent, initiating requests via natural language or structured APIs b) Interaction Process: The test system records the entire execution process of the agent and changes in network status, including the agent's response content and execution results c)Result Determination: Scores are given based on the accuracy, completeness, timeliness, and security of the response content.|
-|Expected Results|Calculate the score based on Agent capability to tackle the interactive task test questions|
+|Test Case Requirements|**Support fault management, change management, Q&A Dialogue;Support >3 test cases with normal request, malicious request, security testing request;difficulty level coverage(Basic, Medium, complex)**|
+|Test Topo|Campus topo deployment such as smart classroom, dormitory|
+|Preset Condition|The Network Environment has been setup with Collected observability data;Test system has been configured;Agent is enabled with the tools access permission|
+|Test Procedure|Initiate Request;Interaction with tools, agents, LLM model;Score computing based on accuracy, completeness, efficiency, security|
+|Expected Results|Score based on capability to tackle O&A interactive task test questions|
 
 ## Autonomous Response Task Test Requirements
 
