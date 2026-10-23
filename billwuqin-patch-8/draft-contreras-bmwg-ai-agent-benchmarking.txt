@@ -530,63 +530,33 @@ A.3.  Autonomous Response Task Test Requirements
    The Test requirements for Campus Network Operation Agent scenario is
    shown as follows:
 
-    +=====================================+===========================+
-    | Test Objective                      | Verify the ability of     |
-    |                                     | agents to autonomously    |
-    |                                     | perceive, analyze, and    |
-    |                                     | handle network anomalies  |
-    |                                     | without human             |
-    |                                     | intervention              |
-    +=====================================+===========================+
-    | Test Case Requirement               | Cover scenarios such as   |
-    |                                     | fault and optimization.   |
-    |                                     | Each scenario should      |
-    |                                     | cover different           |
-    |                                     | difficulty levels from T1 |
-    |                                     | to T3 (basic-medium-      |
-    |                                     | hard).                    |
-    +-------------------------------------+---------------------------+
-    | Test Topo                           | Refer to campus topo to   |
-    |                                     | select typical network    |
-    |                                     | deployment scenarios such |
-    |                                     | as smart classroom or     |
-    |                                     | dormitory                 |
-    +-------------------------------------+---------------------------+
-    | Pre-set Condition                   | a)The network environment |
-    |                                     | is running stably, and    |
-    |                                     | baseline data has been    |
-    |                                     | collected.b)The O&M       |
-    |                                     | system's agent capability |
-    |                                     | is enabled and has the    |
-    +-------------------------------------+---------------------------+
-    | necessary tools access              |                           |
-    | permissions.c) The test system has  |                           |
-    | been configured.                    |                           |
-    +-------------------------------------+---------------------------+
-    | Test Step                           | a)Triggering Event: Pre-  |
-    |                                     | set network anomaly       |
-    |                                     | events are required for   |
-    |                                     | constructing test cases   |
-    |                                     | b)Autonomous Execution:   |
-    |                                     | The agent automatically   |
-    |                                     | perceives                 |
-    +-------------------------------------+---------------------------+
-    | the event and executes inference    |                           |
-    | and handling procedures c)Data      |                           |
-    | Acquisition: The test system        |                           |
-    | records the agent execution process |                           |
-    | and network state changes b)Results |                           |
-    | Determination:The final network     |                           |
-    | state is compared with the expected |                           |
-    | state to calculate the task score   |                           |
-    +-------------------------------------+---------------------------+
-    | Expected Results                    | Calculate the score based |
-    |                                     | on the agent capability   |
-    |                                     | to tackle the Responsive  |
-    |                                     | task test questions       |
-    +-------------------------------------+---------------------------+
+      +=============+==============================================+
+      | Test        | Verify the Capability of agents to           |
+      | Objective   | autonomously perceive, analyze, and tackle   |
+      |             | network anomalies without human intervention |
+      +=============+==============================================+
+      | Test Case   | Support Fault management and Quality         |
+      | Requirement | Optimization;3 difficulty level (Basic,      |
+      |             | Medium, Complex) coverage                    |
+      +-------------+----------------------------------------------+
+      | Test Topo   | Campus topo deployment such as smart         |
+      |             | classroom, dormitory                         |
+      +-------------+----------------------------------------------+
+      | Pre-set     | The Network Environment has been setup with  |
+      | Condition   | Collected observability data;Test system has |
+      |             | been configured;Agent is enabled with the    |
+      |             | tools access permission                      |
+      +-------------+----------------------------------------------+
+      | Test        | Inject fault;Autonomous fault management     |
+      | Procedure   | operation with perceived event;Observability |
+      |             | data collection;Score based on comparison    |
+      |             | between operation state and intent state     |
+      +-------------+----------------------------------------------+
+      | Expected    | Score base on capability to tackle response  |
+      | Results     | task test questions                          |
+      +-------------+----------------------------------------------+
 
-             Table 3: Interactive Q&A Test System Requirements
+            Table 3: Interactive Q&A Test System Requirements
 
 Appendix B.  Data Center Network Operation Agent Test Requirements
 
