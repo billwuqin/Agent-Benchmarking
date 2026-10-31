@@ -82,6 +82,14 @@ networking with AI agents.
 *  Failure: inability to complete a task or incorrect execution
    leading to invalid network state.
 
+* Interactive Q&A Task: Initiated by the user or system through
+  dialogue or system API request, the AI agent completes the
+  task interactively.
+
+* Autonomous Response Task: Driven by network events or network
+  failures, the AI agent completes tasks autonomously without user
+  intervention.
+
 # Scope
 
 This document defines methodologies to benchmark AI agents performing
