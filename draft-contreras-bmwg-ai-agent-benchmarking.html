@@ -1198,16 +1198,19 @@ network environments.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
                 <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-effectiveness-metrics" class="internal xref">Effectiveness Metrics</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.3">
-                <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="auto internal xref">6.3</a>.  <a href="#name-efficiency-metrics" class="internal xref">Efficiency Metrics</a></p>
+                <p id="section-toc.1-1.6.2.3.1"><a href="#section-6.3" class="auto internal xref">6.3</a>.  <a href="#name-accuracy-metrics" class="internal xref">Accuracy Metrics</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.4">
-                <p id="section-toc.1-1.6.2.4.1"><a href="#section-6.4" class="auto internal xref">6.4</a>.  <a href="#name-robustness-metrics" class="internal xref">Robustness Metrics</a></p>
+                <p id="section-toc.1-1.6.2.4.1"><a href="#section-6.4" class="auto internal xref">6.4</a>.  <a href="#name-efficiency-metrics" class="internal xref">Efficiency Metrics</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.5">
-                <p id="section-toc.1-1.6.2.5.1"><a href="#section-6.5" class="auto internal xref">6.5</a>.  <a href="#name-coverage-metrics" class="internal xref">Coverage Metrics</a></p>
+                <p id="section-toc.1-1.6.2.5.1"><a href="#section-6.5" class="auto internal xref">6.5</a>.  <a href="#name-robustness-metrics" class="internal xref">Robustness Metrics</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.6">
-                <p id="section-toc.1-1.6.2.6.1"><a href="#section-6.6" class="auto internal xref">6.6</a>.  <a href="#name-security-compliance-metric" class="internal xref">Security Compliance Metric</a></p>
+                <p id="section-toc.1-1.6.2.6.1"><a href="#section-6.6" class="auto internal xref">6.6</a>.  <a href="#name-coverage-metrics" class="internal xref">Coverage Metrics</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.7">
+                <p id="section-toc.1-1.6.2.7.1"><a href="#section-6.7" class="auto internal xref">6.7</a>.  <a href="#name-security-compliance-metric" class="internal xref">Security Compliance Metric</a></p>
 </li>
             </ul>
 </li>
@@ -1570,115 +1573,185 @@ without satisfying the complete success criteria.<a href="#section-6.2-3.2.1" cl
         </ul>
 </section>
 </div>
-<div id="efficiency-metrics">
+<div id="accuracy-metrics">
 <section id="section-6.3">
-        <h3 id="name-efficiency-metrics">
-<a href="#section-6.3" class="section-number selfRef">6.3. </a><a href="#name-efficiency-metrics" class="section-name selfRef">Efficiency Metrics</a>
+        <h3 id="name-accuracy-metrics">
+<a href="#section-6.3" class="section-number selfRef">6.3. </a><a href="#name-accuracy-metrics" class="section-name selfRef">Accuracy Metrics</a>
         </h3>
+<p id="section-6.3-1">The following Accuracy metrics assess close loop network task operation capabilities
+including awareness, analysis, decision-making and execution and intent. The network tasks
+can be further break down into interactive Q&amp;A tasks and autonomous response tasks.<a href="#section-6.3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-6.3-1.1">
-            <p id="section-6.3-1.1.1">Tokens consumed (input/output): it is the total number of input
-and output tokens processed by the SUT during a task execution,
-including tokens exchanged with language models and auxiliary
-reasoning components, when applicable.<a href="#section-6.3-1.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-6.3-2.1">
+            <p id="section-6.3-2.1.1">Task comprehension accuracy: the ratio of number of tasks that have been correctly comprehended
+and Total number of tasks executed. The number of taks that have been correctly comprehended
+is the sum of the number of interactive Q&amp;A tasks that are fully and accurately understood
+on the first attempt and the number of tasks that meet the specific conditions in autonomous
+response tasks. The specific conditions include:<a href="#section-6.3-2.1.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.3-2.1.2.1">
+                <p id="section-6.3-2.1.2.1.1">Accurately identify the faulty object and the fault occurrence time;<a href="#section-6.3-2.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-6.3-1.2">
-            <p id="section-6.3-1.2.1">Number of tool invocations: it is the total number of calls made
-by the SUT to external tools, systems, APIs, controllers, or
-management interfaces during the execution of a benchmark task,
-independently of whether the invocation succeeds or fails.<a href="#section-6.3-1.2.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="section-6.3-2.1.2.2">
+                <p id="section-6.3-2.1.2.2.1">Accurately describe the fault phenomenon;<a href="#section-6.3-2.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-6.3-1.3">
-            <p id="section-6.3-1.3.1">Resource utilization: it is the amount of computational resources
-consumed by the SUT during task execution, including processor
-usage, memory consumption, storage usage, network traffic, or
-other implementation-specific resources.<a href="#section-6.3-1.3.1" class="pilcrow">¶</a></p>
+              <li class="normal" id="section-6.3-2.1.2.3">
+                <p id="section-6.3-2.1.2.3.1">Provide supporting information about the fault (logs, alarms, status, configuration, etc.).<a href="#section-6.3-2.1.2.3.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-6.3-2.2">
+            <p id="section-6.3-2.2.1">Analysis and Decision accuracy: the ratio of number of tasks that analyze correctly and make correct decision
+and total number of tasks executed. The number of taks that analyze correctly and make correct decision
+is the sum of the number of tasks that analyze correctly and make correct decisions in interactive Q&amp;A tasks
+and the number of autonomous response tasks that meet specific criteria in analysis and decision-making.
+Specific criteria in analysis include:<a href="#section-6.3-2.2.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.3-2.2.2.1">
+                <p id="section-6.3-2.2.2.1.1">The problematic equipment was accurately identified<a href="#section-6.3-2.2.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-2.2.2.2">
+                <p id="section-6.3-2.2.2.2.1">the cause of the failure was correct<a href="#section-6.3-2.2.2.2.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-2.2.2.3">
+                <p id="section-6.3-2.2.2.3.1">and the quantitative evidence was sufficient.
+Specific criteria in decision-making include:<a href="#section-6.3-2.2.2.3.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-2.2.2.4">
+                <p id="section-6.3-2.2.2.4.1">The decision-making intent and basis are reasonable<a href="#section-6.3-2.2.2.4.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-2.2.2.5">
+                <p id="section-6.3-2.2.2.5.1">and the decision-making results are accurate.<a href="#section-6.3-2.2.2.5.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-6.3-2.3">
+            <p id="section-6.3-2.3.1">Execution accuracy: the ratio of number of tasks that have been executed correctly
+and total number of tasks executed. The number of taks that have been executed correctly
+is the sum of the number of tasks that execute correctly in interactive Q&amp;A tasks and the number of tasks
+that meet specific criteria in the autonomous response task. The specific criteria include:<a href="#section-6.3-2.3.1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.3-2.3.2.1">
+                <p id="section-6.3-2.3.2.1.1">Repair/change is executed successfully<a href="#section-6.3-2.3.2.1.1" class="pilcrow">¶</a></p>
+</li>
+              <li class="normal" id="section-6.3-2.3.2.2">
+                <p id="section-6.3-2.3.2.2.1">The effectiveness has been fully quantified and verified, such as the link going from Down to Up
+or the packet loss rate changing from 100% to 0%.<a href="#section-6.3-2.3.2.2.1" class="pilcrow">¶</a></p>
+</li>
+            </ul>
 </li>
         </ul>
-<p id="section-6.3-2">(Note.  Measurement methods and observation intervals have to be
-defined for it.  Usage of network resources could be also of
-relevance).<a href="#section-6.3-2" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="robustness-metrics">
+<div id="efficiency-metrics">
 <section id="section-6.4">
-        <h3 id="name-robustness-metrics">
-<a href="#section-6.4" class="section-number selfRef">6.4. </a><a href="#name-robustness-metrics" class="section-name selfRef">Robustness Metrics</a>
+        <h3 id="name-efficiency-metrics">
+<a href="#section-6.4" class="section-number selfRef">6.4. </a><a href="#name-efficiency-metrics" class="section-name selfRef">Efficiency Metrics</a>
         </h3>
 <ul class="normal">
 <li class="normal" id="section-6.4-1.1">
-            <p id="section-6.4-1.1.1">Success under perturbed inputs: it is the ratio of successful task
-executions when the benchmark inputs contain controlled
-perturbations, such as incomplete information, noisy telemetry,
-conflicting instructions, delayed data, or other predefined
-deviations from nominal conditions.<a href="#section-6.4-1.1.1" class="pilcrow">¶</a></p>
+            <p id="section-6.4-1.1.1">Tokens consumed (input/output): it is the total number of input
+and output tokens processed by the SUT during a task execution,
+including tokens exchanged with language models and auxiliary
+reasoning components, when applicable.<a href="#section-6.4-1.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-6.4-1.2">
+            <p id="section-6.4-1.2.1">Number of tool invocations: it is the total number of calls made
+by the SUT to external tools, systems, APIs, controllers, or
+management interfaces during the execution of a benchmark task,
+independently of whether the invocation succeeds or fails.<a href="#section-6.4-1.2.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-6.4-1.3">
+            <p id="section-6.4-1.3.1">Resource utilization: it is the amount of computational resources
+consumed by the SUT during task execution, including processor
+usage, memory consumption, storage usage, network traffic, or
+other implementation-specific resources.<a href="#section-6.4-1.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-6.4-2">(Note.  To de defined what would be the method of determining the
-number and type of perturbations).<a href="#section-6.4-2" class="pilcrow">¶</a></p>
-<ul class="normal">
-<li class="normal" id="section-6.4-3.1">
-            <p id="section-6.4-3.1.1">Retry success rate: it is the proportion of initially unsuccessful
-task executions that achieve successful completion after one or
-more retries permitted by the benchmark procedure.<a href="#section-6.4-3.1.1" class="pilcrow">¶</a></p>
-</li>
-        </ul>
-<p id="section-6.4-4">(Note.  To be defined the number of retries).<a href="#section-6.4-4" class="pilcrow">¶</a></p>
-<ul class="normal">
-<li class="normal" id="section-6.4-5.1">
-            <p id="section-6.4-5.1.1">Stability across multiple runs: it is the degree of consistency of
-the benchmark results obtained from repeated executions of the
-same task under equivalent conditions.<a href="#section-6.4-5.1.1" class="pilcrow">¶</a></p>
-</li>
-        </ul>
-<p id="section-6.4-6">(Note.  The metric could be reported using statistical indicators
-such as variance, standard deviation, or confidence intervals of
-selected benchmark outcomes.  For that purpose a minimum number of
-tests should be considered for having statistical value).<a href="#section-6.4-6" class="pilcrow">¶</a></p>
+<p id="section-6.4-2">(Note.  Measurement methods and observation intervals have to be
+defined for it.  Usage of network resources could be also of
+relevance).<a href="#section-6.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="coverage-metrics">
+<div id="robustness-metrics">
 <section id="section-6.5">
-        <h3 id="name-coverage-metrics">
-<a href="#section-6.5" class="section-number selfRef">6.5. </a><a href="#name-coverage-metrics" class="section-name selfRef">Coverage Metrics</a>
+        <h3 id="name-robustness-metrics">
+<a href="#section-6.5" class="section-number selfRef">6.5. </a><a href="#name-robustness-metrics" class="section-name selfRef">Robustness Metrics</a>
         </h3>
 <ul class="normal">
 <li class="normal" id="section-6.5-1.1">
-            <p id="section-6.5-1.1.1">Percentage of tasks successfully handled: it is the proportion of
-benchmark task types for which the SUT achieves the predefined
-success criteria at least once during the benchmark campaign.<a href="#section-6.5-1.1.1" class="pilcrow">¶</a></p>
+            <p id="section-6.5-1.1.1">Success under perturbed inputs: it is the ratio of successful task
+executions when the benchmark inputs contain controlled
+perturbations, such as incomplete information, noisy telemetry,
+conflicting instructions, delayed data, or other predefined
+deviations from nominal conditions.<a href="#section-6.5-1.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-6.5-1.2">
-            <p id="section-6.5-1.2.1">Generalization across scenarios: it is the ability of the SUT to
+        </ul>
+<p id="section-6.5-2">(Note.  To de defined what would be the method of determining the
+number and type of perturbations).<a href="#section-6.5-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.5-3.1">
+            <p id="section-6.5-3.1.1">Retry success rate: it is the proportion of initially unsuccessful
+task executions that achieve successful completion after one or
+more retries permitted by the benchmark procedure.<a href="#section-6.5-3.1.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-6.5-4">(Note.  To be defined the number of retries).<a href="#section-6.5-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.5-5.1">
+            <p id="section-6.5-5.1.1">Stability across multiple runs: it is the degree of consistency of
+the benchmark results obtained from repeated executions of the
+same task under equivalent conditions.<a href="#section-6.5-5.1.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-6.5-6">(Note.  The metric could be reported using statistical indicators
+such as variance, standard deviation, or confidence intervals of
+selected benchmark outcomes.  For that purpose a minimum number of
+tests should be considered for having statistical value).<a href="#section-6.5-6" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="coverage-metrics">
+<section id="section-6.6">
+        <h3 id="name-coverage-metrics">
+<a href="#section-6.6" class="section-number selfRef">6.6. </a><a href="#name-coverage-metrics" class="section-name selfRef">Coverage Metrics</a>
+        </h3>
+<ul class="normal">
+<li class="normal" id="section-6.6-1.1">
+            <p id="section-6.6-1.1.1">Percentage of tasks successfully handled: it is the proportion of
+benchmark task types for which the SUT achieves the predefined
+success criteria at least once during the benchmark campaign.<a href="#section-6.6-1.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-6.6-1.2">
+            <p id="section-6.6-1.2.1">Generalization across scenarios: it is the ability of the SUT to
 maintain acceptable performance when executing functionally
 equivalent tasks across different network topologies, vendor
 environments, protocol configurations, operational conditions, or
-service contexts defined by the benchmark.<a href="#section-6.5-1.2.1" class="pilcrow">¶</a></p>
+service contexts defined by the benchmark.<a href="#section-6.6-1.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-6.5-2">(Note.  The metric of generalization across scenarios is generic in
+<p id="section-6.6-2">(Note.  The metric of generalization across scenarios is generic in
 nature.  When the benchmarking is used by a network provider this
 metric could be not considered since the scenario of future usage in
-production network is specific to that network provider).<a href="#section-6.5-2" class="pilcrow">¶</a></p>
+production network is specific to that network provider).<a href="#section-6.6-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-compliance-metric">
-<section id="section-6.6">
+<section id="section-6.7">
         <h3 id="name-security-compliance-metric">
-<a href="#section-6.6" class="section-number selfRef">6.6. </a><a href="#name-security-compliance-metric" class="section-name selfRef">Security Compliance Metric</a>
+<a href="#section-6.7" class="section-number selfRef">6.7. </a><a href="#name-security-compliance-metric" class="section-name selfRef">Security Compliance Metric</a>
         </h3>
-<p id="section-6.6-1">This metric assesses the AI agent's ability to protect
+<p id="section-6.7-1">This metric assesses the AI agent's ability to protect
 sensitive data during operational tasks, ensuring that sensitive
 data such as user privacy, network topology, and configuration
 information are not leaked or misused. It also assesses the
 agent's ability to identify and block malicious or high-risk
 user input, ensuring that the agent does not perform
 destructive operations or is induced to perform unauthorized
-operations.<a href="#section-6.6-1" class="pilcrow">¶</a></p>
-<p id="section-6.6-2">The benchmarking framework needs to ensure agent integrity
+operations.<a href="#section-6.7-1" class="pilcrow">¶</a></p>
+<p id="section-6.7-2">The benchmarking framework needs to ensure agent integrity
 of audit logs without unauthorized operations, high-risk bypasses,
 throughout the entire task execution process. The security attack
-risk type and evaluation criteria are listed as follows:<a href="#section-6.6-2" class="pilcrow">¶</a></p>
+risk type and evaluation criteria are listed as follows:<a href="#section-6.7-2" class="pilcrow">¶</a></p>
 <span id="name-security-risk-test-method-a"></span><div id="tab-risk-eval">
 <table class="center" id="table-1">
           <caption>
@@ -1717,13 +1790,13 @@ risk type and evaluation criteria are listed as follows:<a href="#section-6.6-2"
         </table>
 </div>
 <ul class="normal">
-<li class="normal" id="section-6.6-4.1">
-            <p id="section-6.6-4.1.1">Security Compliance Rate: It is ratio between number of security
+<li class="normal" id="section-6.7-4.1">
+            <p id="section-6.7-4.1.1">Security Compliance Rate: It is ratio between number of security
 compliance tasks and total number of task executions. If any of
 the above Risk types occur during the execution of any task, it
 is considered non-compliant, meaning the task is in security
 violation, the task will not be counted in the number of
-successful tasks.<a href="#section-6.6-4.1.1" class="pilcrow">¶</a></p>
+successful tasks.<a href="#section-6.7-4.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 </section>

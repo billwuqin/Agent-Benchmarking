@@ -81,10 +81,11 @@ Table of Contents
    6.  Benchmarking Metrics
      6.1.  Performance Metrics
      6.2.  Effectiveness Metrics
-     6.3.  Efficiency Metrics
-     6.4.  Robustness Metrics
-     6.5.  Coverage Metrics
-     6.6.  Security Compliance Metric
+     6.3.  Accuracy Metrics
+     6.4.  Efficiency Metrics
+     6.5.  Robustness Metrics
+     6.6.  Coverage Metrics
+     6.7.  Security Compliance Metric
    7.  Reporting Format
    8.  Security Considerations
    9.  IANA Considerations
@@ -326,7 +327,63 @@ Table of Contents
       executions that achieve a subset of the predefined task objectives
       without satisfying the complete success criteria.
 
-6.3.  Efficiency Metrics
+6.3.  Accuracy Metrics
+
+   The following Accuracy metrics assess close loop network task
+   operation capabilities including awareness, analysis, decision-making
+   and execution and intent.  The network tasks can be further break
+   down into interactive Q&A tasks and autonomous response tasks.
+
+   *  Task comprehension accuracy: the ratio of number of tasks that
+      have been correctly comprehended and Total number of tasks
+      executed.  The number of taks that have been correctly
+      comprehended is the sum of the number of interactive Q&A tasks
+      that are fully and accurately understood on the first attempt and
+      the number of tasks that meet the specific conditions in
+      autonomous response tasks.  The specific conditions include:
+
+      -  Accurately identify the faulty object and the fault occurrence
+         time;
+
+      -  Accurately describe the fault phenomenon;
+
+      -  Provide supporting information about the fault (logs, alarms,
+         status, configuration, etc.).
+
+   *  Analysis and Decision accuracy: the ratio of number of tasks that
+      analyze correctly and make correct decision and total number of
+      tasks executed.  The number of taks that analyze correctly and
+      make correct decision is the sum of the number of tasks that
+      analyze correctly and make correct decisions in interactive Q&A
+      tasks and the number of autonomous response tasks that meet
+      specific criteria in analysis and decision-making.  Specific
+      criteria in analysis include:
+
+      -  The problematic equipment was accurately identified
+
+      -  the cause of the failure was correct
+
+      -  and the quantitative evidence was sufficient.  Specific
+         criteria in decision-making include:
+
+      -  The decision-making intent and basis are reasonable
+
+      -  and the decision-making results are accurate.
+
+   *  Execution accuracy: the ratio of number of tasks that have been
+      executed correctly and total number of tasks executed.  The number
+      of taks that have been executed correctly is the sum of the number
+      of tasks that execute correctly in interactive Q&A tasks and the
+      number of tasks that meet specific criteria in the autonomous
+      response task.  The specific criteria include:
+
+      -  Repair/change is executed successfully
+
+      -  The effectiveness has been fully quantified and verified, such
+         as the link going from Down to Up or the packet loss rate
+         changing from 100% to 0%.
+
+6.4.  Efficiency Metrics
 
    *  Tokens consumed (input/output): it is the total number of input
       and output tokens processed by the SUT during a task execution,
@@ -347,7 +404,7 @@ Table of Contents
    defined for it.  Usage of network resources could be also of
    relevance).
 
-6.4.  Robustness Metrics
+6.5.  Robustness Metrics
 
    *  Success under perturbed inputs: it is the ratio of successful task
       executions when the benchmark inputs contain controlled
@@ -373,7 +430,7 @@ Table of Contents
    selected benchmark outcomes.  For that purpose a minimum number of
    tests should be considered for having statistical value).
 
-6.5.  Coverage Metrics
+6.6.  Coverage Metrics
 
    *  Percentage of tasks successfully handled: it is the proportion of
       benchmark task types for which the SUT achieves the predefined
@@ -390,7 +447,7 @@ Table of Contents
    metric could be not considered since the scenario of future usage in
    production network is specific to that network provider).
 
-6.6.  Security Compliance Metric
+6.7.  Security Compliance Metric
 
    This metric assesses the AI agent's ability to protect sensitive data
    during operational tasks, ensuring that sensitive data such as user
