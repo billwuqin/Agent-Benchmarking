@@ -20,6 +20,10 @@ author:
     fullname: Luis M. Contreras
     organization: Telefonica
     email: luismiguel.contrerasmurillo@telefonica.com
+ -
+    fullname: Qin Wu
+    organization: Huawei
+    email: bill.wu@huawei.com
 
 normative:
 
