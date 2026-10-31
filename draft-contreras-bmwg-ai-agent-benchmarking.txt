@@ -263,6 +263,53 @@ Table of Contents
 
    *  Independent or part of multi-step workflows
 
+   Network operation tasks are categorized into three complexity levels:
+   simple, medium, and complex, corresponding to difficulty levels T1,
+   T2, and T3, respectively.  The definition standards for each task
+   level are detailed below.
+
+   +==========+==========+==============+==============+=============+=============+
+   |Difficulty|Complexity|Characteristic|Scope         |Operational  |Example Task |
+   |          |          |              |              |Risk         |             |
+   +==========+==========+==============+==============+=============+=============+
+   |T1        |Simple    |Single device,|Single        |low, no      |Equipment    |
+   |          |          |single        |device,single |configuration|information  |
+   |          |          |parameter     |domain        |change       |query,       |
+   |          |          |query, or     |              |             |performance  |
+   |          |          |simple status |              |             |metric query,|
+   |          |          |check; no     |              |             |alarm        |
+   |          |          |change        |              |             |information  |
+   |          |          |operations    |              |             |query        |
+   +----------+----------+--------------+--------------+-------------+-------------+
+   |T2        |Medium    |Require multi-|multi-devices,|involve minor|Fault        |
+   |          |          |step reasoning|single domain |configuration|location and |
+   |          |          |or multi-     |              |adjustment   |root cause   |
+   |          |          |device        |              |with rollback|analysis     |
+   |          |          |coordination; |              |option       |(single fault|
+   |          |          |clear fault   |              |             |source),     |
+   |          |          |location;     |              |             |standard     |
+   |          |          |change        |              |             |configuration|
+   |          |          |operations    |              |             |changes (such|
+   |          |          |with standard |              |             |as VLAN      |
+   |          |          |procedure     |              |             |adjustments) |
+   +----------+----------+--------------+--------------+-------------+-------------+
+   |T3        |complex   |Multi-device, |multi-device  |high,        |Multi-device |
+   |          |          |multi-protocol|coordiniation,|Configuration|BGP neighbor |
+   |          |          |coordination, |cross domain  |errors may   |relationship |
+   |          |          |cross-domain  |              |cause service|fault        |
+   |          |          |changes,      |              |interruption |recovery,    |
+   |          |          |complex root  |              |             |core device  |
+   |          |          |cause         |              |             |configuration|
+   |          |          |analysis,     |              |             |change       |
+   |          |          |requiring     |              |             |             |
+   |          |          |impact        |              |             |             |
+   |          |          |assessment and|              |             |             |
+   |          |          |rollback      |              |             |             |
+   |          |          |verification  |              |             |             |
+   +----------+----------+--------------+--------------+-------------+-------------+
+
+                                  Table 1
+
 5.2.  Execution Model
 
    Each task execution has to be modeled as an episode including:
@@ -502,7 +549,7 @@ Table of Contents
    |              | passwords or keys)   |                            |
    +--------------+----------------------+----------------------------+
 
-            Table 1: Security Risk Test Method and Evaluation
+            Table 2: Security Risk Test Method and Evaluation
 
    *  Security Compliance Rate: It is ratio between number of security
       compliance tasks and total number of task executions.  If any of
@@ -630,7 +677,7 @@ A.1.  Network Topology Test Requirements
    |                   |            | traffic and north-south traffic |
    +-------------------+------------+---------------------------------+
 
-             Table 2: Test System Configuration Requirements
+             Table 3: Test System Configuration Requirements
 
 A.2.  Interactive Q&A Task Test Requirements
 
@@ -664,7 +711,7 @@ A.2.  Interactive Q&A Task Test Requirements
       | Results      | interactive task test questions              |
       +--------------+----------------------------------------------+
 
-                                  Table 3
+                                  Table 4
 
 A.3.  Autonomous Response Task Test Requirements
 
@@ -697,7 +744,7 @@ A.3.  Autonomous Response Task Test Requirements
       | Results     | task test questions                          |
       +-------------+----------------------------------------------+
 
-            Table 4: Interactive Q&A Test System Requirements
+            Table 5: Interactive Q&A Test System Requirements
 
 Appendix B.  Data Center Network Operation Agent Test Usage Example
 
@@ -785,7 +832,7 @@ B.1.  Network Topology Test Requirements
       |           |            | north-south traffic                |
       +-----------+------------+------------------------------------+
 
-              Table 5: Test System Configuration Requirements
+              Table 6: Test System Configuration Requirements
 
 B.2.  Interactive Q&A Task Test Requirements
 
@@ -822,7 +869,7 @@ B.2.  Interactive Q&A Task Test Requirements
       | Results      | interactive task test questions              |
       +--------------+----------------------------------------------+
 
-                                  Table 6
+                                  Table 7
 
 B.3.  Autonomous Response Task Test Requirements
 
@@ -857,7 +904,7 @@ B.3.  Autonomous Response Task Test Requirements
     | Results     | test questions                                   |
     +-------------+--------------------------------------------------+
 
-            Table 7: Interactive Q&A Test System Requirements
+            Table 8: Interactive Q&A Test System Requirements
 
 Authors' Addresses
 

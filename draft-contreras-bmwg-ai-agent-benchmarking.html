@@ -1472,6 +1472,49 @@ defined to be:<a href="#section-5.1-1" class="pilcrow">¶</a></p>
             <p id="section-5.1-2.3.1">Independent or part of multi-step workflows<a href="#section-5.1-2.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
+<p id="section-5.1-3">Network operation tasks are categorized into three complexity levels:
+simple, medium, and complex, corresponding to difficulty levels T1,
+T2, and T3, respectively. The definition standards for each task
+level are detailed below.<a href="#section-5.1-3" class="pilcrow">¶</a></p>
+<table class="center" id="table-1">
+          <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
+<thead>
+            <tr>
+              <th class="text-left" rowspan="1" colspan="1">Difficulty</th>
+              <th class="text-left" rowspan="1" colspan="1">Complexity</th>
+              <th class="text-left" rowspan="1" colspan="1">Characteristic</th>
+              <th class="text-left" rowspan="1" colspan="1">Scope</th>
+              <th class="text-left" rowspan="1" colspan="1">Operational Risk</th>
+              <th class="text-left" rowspan="1" colspan="1">Example Task</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">T1</td>
+              <td class="text-left" rowspan="1" colspan="1">Simple</td>
+              <td class="text-left" rowspan="1" colspan="1">Single device, single parameter query, or simple status check; no change operations</td>
+              <td class="text-left" rowspan="1" colspan="1">Single device,single domain</td>
+              <td class="text-left" rowspan="1" colspan="1">low, no configuration change</td>
+              <td class="text-left" rowspan="1" colspan="1">Equipment information query, performance metric query, alarm information query</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">T2</td>
+              <td class="text-left" rowspan="1" colspan="1">Medium</td>
+              <td class="text-left" rowspan="1" colspan="1">Require multi-step reasoning or multi-device coordination; clear fault location; change operations with standard procedure</td>
+              <td class="text-left" rowspan="1" colspan="1">multi-devices, single domain</td>
+              <td class="text-left" rowspan="1" colspan="1">involve minor configuration adjustment with rollback option</td>
+              <td class="text-left" rowspan="1" colspan="1">Fault location and root cause analysis (single fault source), standard configuration changes (such as VLAN adjustments)</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">T3</td>
+              <td class="text-left" rowspan="1" colspan="1">complex</td>
+              <td class="text-left" rowspan="1" colspan="1">Multi-device, multi-protocol coordination, cross-domain changes, complex root cause analysis, requiring impact assessment and rollback verification</td>
+              <td class="text-left" rowspan="1" colspan="1">multi-device coordiniation, cross domain</td>
+              <td class="text-left" rowspan="1" colspan="1">high, Configuration errors may cause service interruption</td>
+              <td class="text-left" rowspan="1" colspan="1">Multi-device BGP neighbor relationship fault recovery, core device configuration change</td>
+            </tr>
+          </tbody>
+        </table>
 </section>
 </div>
 <div id="execution-model">
@@ -1763,9 +1806,9 @@ of audit logs without unauthorized operations, high-risk bypasses,
 throughout the entire task execution process. The security attack
 risk type and evaluation criteria are listed as follows:<a href="#section-6.7-2" class="pilcrow">¶</a></p>
 <span id="name-security-risk-test-method-a"></span><div id="tab-risk-eval">
-<table class="center" id="table-1">
+<table class="center" id="table-2">
           <caption>
-<a href="#table-1" class="selfRef">Table 1</a>:
+<a href="#table-2" class="selfRef">Table 2</a>:
 <a href="#name-security-risk-test-method-a" class="selfRef">Security Risk Test Method and Evaluation</a>
           </caption>
 <thead>
@@ -1944,9 +1987,9 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
           </figcaption></figure>
 </div>
 <span id="name-test-system-configuration-r"></span><div id="tab-test-config">
-<table class="center" id="table-2">
+<table class="center" id="table-3">
           <caption>
-<a href="#table-2" class="selfRef">Table 2</a>:
+<a href="#table-3" class="selfRef">Table 3</a>:
 <a href="#name-test-system-configuration-r" class="selfRef">Test System Configuration Requirements</a>
           </caption>
 <thead>
@@ -1998,8 +2041,8 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
 <a href="#appendix-A.2" class="section-number selfRef">A.2. </a><a href="#name-interactive-qa-task-test-re" class="section-name selfRef">Interactive Q&amp;A Task Test Requirements</a>
         </h3>
 <p id="appendix-A.2-1">The Test requirements for Campus Network Operation Agent scenario is shown as follows:<a href="#appendix-A.2-1" class="pilcrow">¶</a></p>
-<table class="center" id="table-3">
-          <caption><a href="#table-3" class="selfRef">Table 3</a></caption>
+<table class="center" id="table-4">
+          <caption><a href="#table-4" class="selfRef">Table 4</a></caption>
 <thead>
             <tr>
               <th class="text-left" rowspan="1" colspan="1">Test Objective</th>
@@ -2040,9 +2083,9 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
         </h3>
 <p id="appendix-A.3-1">The Test requirements for Campus Network Operation Agent scenario is shown as follows:<a href="#appendix-A.3-1" class="pilcrow">¶</a></p>
 <span id="name-interactive-qa-test-system-"></span><div id="campus-interact">
-<table class="center" id="table-4">
+<table class="center" id="table-5">
           <caption>
-<a href="#table-4" class="selfRef">Table 4</a>:
+<a href="#table-5" class="selfRef">Table 5</a>:
 <a href="#name-interactive-qa-test-system-" class="selfRef">Interactive Q&amp;A Test System Requirements</a>
           </caption>
 <thead>
@@ -2143,9 +2186,9 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
           </figcaption></figure>
 </div>
 <span id="name-test-system-configuration-re"></span><div id="tab-dctest-config">
-<table class="center" id="table-5">
+<table class="center" id="table-6">
           <caption>
-<a href="#table-5" class="selfRef">Table 5</a>:
+<a href="#table-6" class="selfRef">Table 6</a>:
 <a href="#name-test-system-configuration-re" class="selfRef">Test System Configuration Requirements</a>
           </caption>
 <thead>
@@ -2192,8 +2235,8 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
 <a href="#appendix-B.2" class="section-number selfRef">B.2. </a><a href="#name-interactive-qa-task-test-req" class="section-name selfRef">Interactive Q&amp;A Task Test Requirements</a>
         </h3>
 <p id="appendix-B.2-1">The Test requirements for Data Center Network Operation Agent scenario is shown as follows:<a href="#appendix-B.2-1" class="pilcrow">¶</a></p>
-<table class="center" id="table-6">
-          <caption><a href="#table-6" class="selfRef">Table 6</a></caption>
+<table class="center" id="table-7">
+          <caption><a href="#table-7" class="selfRef">Table 7</a></caption>
 <thead>
             <tr>
               <th class="text-left" rowspan="1" colspan="1">Test Objective</th>
@@ -2232,9 +2275,9 @@ management system, AI agent module, and AI agent test system.<a href="#appendix-
         </h3>
 <p id="appendix-B.3-1">The Test requirements for Data Center Network Operation Agent Scenario is shown as follows:<a href="#appendix-B.3-1" class="pilcrow">¶</a></p>
 <span id="name-interactive-qa-test-system-r"></span><div id="dc-interact">
-<table class="center" id="table-7">
+<table class="center" id="table-8">
           <caption>
-<a href="#table-7" class="selfRef">Table 7</a>:
+<a href="#table-8" class="selfRef">Table 8</a>:
 <a href="#name-interactive-qa-test-system-r" class="selfRef">Interactive Q&amp;A Test System Requirements</a>
           </caption>
 <thead>
