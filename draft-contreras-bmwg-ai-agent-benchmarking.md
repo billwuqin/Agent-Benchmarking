@@ -265,6 +265,41 @@ execution and evaluated consistently across SUTs).
    executions that achieve a subset of the predefined task objectives
    without satisfying the complete success criteria.
 
+## Accuracy Metrics
+
+The following Accuracy metrics assess close loop network task operation capabilities
+including awareness, analysis, decision-making and execution and intent. The network tasks
+can be further break down into interactive Q&A tasks and autonomous response tasks.
+
+* Task comprehension accuracy: the ratio of number of tasks that have been correctly comprehended
+  and Total number of tasks executed. The number of taks that have been correctly comprehended
+  is the sum of the number of interactive Q&A tasks that are fully and accurately understood
+  on the first attempt and the number of tasks that meet the specific conditions in autonomous
+  response tasks. The specific conditions include:
+  - Accurately identify the faulty object and the fault occurrence time;
+  - Accurately describe the fault phenomenon;
+  - Provide supporting information about the fault (logs, alarms, status, configuration, etc.).
+
+* Analysis and Decision accuracy: the ratio of number of tasks that analyze correctly and make correct decision
+  and total number of tasks executed. The number of taks that analyze correctly and make correct decision
+  is the sum of the number of tasks that analyze correctly and make correct decisions in interactive Q&A tasks
+  and the number of autonomous response tasks that meet specific criteria in analysis and decision-making.
+  Specific criteria in analysis include:
+  - The problematic equipment was accurately identified
+  - the cause of the failure was correct
+  - and the quantitative evidence was sufficient.
+  Specific criteria in decision-making include:
+  - The decision-making intent and basis are reasonable
+  - and the decision-making results are accurate.
+
+* Execution accuracy: the ratio of number of tasks that have been executed correctly
+  and total number of tasks executed. The number of taks that have been executed correctly
+  is the sum of the number of tasks that execute correctly in interactive Q&A tasks and the number of tasks
+  that meet specific criteria in the autonomous response task. The specific criteria include:
+  - Repair/change is executed successfully
+  - The effectiveness has been fully quantified and verified, such as the link going from Down to Up
+    or the packet loss rate changing from 100% to 0%.
+
 ##  Efficiency Metrics
 
 *  Tokens consumed (input/output): it is the total number of input
