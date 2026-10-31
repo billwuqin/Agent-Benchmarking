@@ -9,6 +9,10 @@ This is the working area for the individual Internet-Draft, "Benchmarking Method
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-contreras-bmwg-ai-agent-benchmarking)
 * [Compare Editor's Copy to Individual Draft](https://billwuqin.github.io/Agent-Benchmarking/#go.draft-contreras-bmwg-ai-agent-benchmarking.diff)
 
+* [Editor's Copy](https://billwuqin.github.io/Agent-Benchmarking/#go.draft-contreras-bpm-ai-agent-benchmarking.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-contreras-bpm-ai-agent-benchmarking)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-contreras-bpm-ai-agent-benchmarking)
+* [Compare Editor's Copy to Individual Draft](https://billwuqin.github.io/Agent-Benchmarking/#go.draft-contreras-bpm-ai-agent-benchmarking.diff)
 
 ## Contributing
 
