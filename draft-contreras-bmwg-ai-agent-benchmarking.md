@@ -378,4 +378,4 @@ This document has no IANA actions.
 # Acknowledgments
 {:numbered="false"}
 
-TODO acknowledge.
+Thanks Yasha Khandelwal and Zhenqiang Li for valuable review and inputs.
