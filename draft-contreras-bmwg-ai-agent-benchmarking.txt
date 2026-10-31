@@ -4,8 +4,8 @@
 
 Benchmarking Methodology                                 L. M. Contreras
 Internet-Draft                                                Telefonica
-Intended status: Informational                            8 October 2026
-Expires: 11 April 2027
+Intended status: Informational                           31 October 2026
+Expires: 4 May 2027
 
 
       Benchmarking Methodology for AI Agents in Network Operations
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 April 2027.
+   This Internet-Draft will expire on 4 May 2027.
 
 Copyright Notice
 
@@ -86,8 +86,16 @@ Table of Contents
    7.  Reporting Format
    8.  Security Considerations
    9.  IANA Considerations
-   10. Normative References
    Acknowledgments
+   Normative References
+   Appendix A.  Campus Network Operation Agent Test Usage Example
+     A.1.  Network Topology Test Requirements
+     A.2.  Interactive Q&A Task Test Requirements
+     A.3.  Autonomous Response Task Test Requirements
+   Appendix B.  Data Center Network Operation Agent Test Usage Example
+     B.1.  Network Topology Test Requirements
+     B.2.  Interactive Q&A Task Test Requirements
+     B.3.  Autonomous Response Task Test Requirements
    Author's Address
 
 1.  Introduction
@@ -392,7 +400,11 @@ Table of Contents
 
    This document has no IANA actions.
 
-10.  Normative References
+Acknowledgments
+
+   TODO acknowledge.
+
+Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -403,9 +415,308 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-Acknowledgments
+Appendix A.  Campus Network Operation Agent Test Usage Example
 
-   TODO acknowledge.
+A.1.  Network Topology Test Requirements
+
+   The campus network operation agent test needs to support a typical
+   test network topology as shown in Figure 1, including the network
+   device layer, operation and maintenance management system, AI agent
+   module, and AI agent test system.
+
+                          +-------------------------+
+                          | Campus Network Operation|
+                          |        Agent            |
+                          +----------+--------------+
+                                     |
+    +--------------------------------+--------------------------------+
+    |                            ----+---                             |
+    |                        ////        \\\\                         |
+    |                       |    Internet/   |                        |
+    |                       |      WAN       |                        |
+    |                        \\\\        ////                         |
+    |                            ----+---                             |
+    |                                |GE0/0/1                         |
+    |                         +------+------+                         |
+    | Aggregation             | o o o o  oo |S3                       |
+    |                  +-----++-------------++-------+                |
+    |                  |      | o o o o  oo |        |                |
+    |                  |      +-------------+        |                |
+    |                  |                             |                |
+    |      +-----------+---------+       +-----------+---------+      |
+    |      |         GE0/0/1     |       |        GE0/0/1      |      |
+    |Access|     +-----+-----+   |       |     +-----+-----+   |      |
+    |      |     |O O O    o |S1 |       |     |O O O    o |S2 |      |
+    |      |     +-----+-----+   |       |     +-----+-----+   |      |
+    |      |  GE0/0/2  |  GE0/0/3|       |   GE0/0/2 | GE0/0/3 |      |
+    |      |   +-------------+   |       |   +-------------+   |      |
+    |      |+--+--+       +--+--+|       |+--+--+       +--+--+|      |
+    |      ||AP1  |       |AP2  ||       || AP3 |       |AP4  ||      |
+    |      |+-----+       +-----+|       |+-----+       +-----+|      |
+    |      +---------------------+       +---------------------+      |
+    |                                                                 |
+    |                                                                 |
+    |       +------+  +------+           +------+  +------+           |
+    |Device |Laptop|  |Phone |....       |Laptop|  |Phone |...        |
+    |       +------+  +------+           +------+  +------+           |
+    +-----------------------------------------------------------------+
+
+       Figure 1: Campus Network Operation Test Agent Network Topology
+
+   +===================+============+=================================+
+   | Test Config       | Category   | Config Capabilities             |
+   +===================+============+=================================+
+   | End Device        | Mobile     | 2.4G Access,5G Access           |
+   |                   | Phone/     |                                 |
+   |                   | Laptop     |                                 |
+   +-------------------+------------+---------------------------------+
+   | Network Element   | WLAN AP/   | Telemetry Support               |
+   |                   | Switch     |                                 |
+   +-------------------+------------+---------------------------------+
+   | Network Operation | O&M        | Configuration, Monitoring,      |
+   | Agent             | Management | Fault Management using existing |
+   |                   | System     | Management System               |
+   +-------------------+------------+---------------------------------+
+   | Network Operation | LLM        | Model Name, Version, Size Local |
+   | Large Model       |            | deployment close to the data    |
+   +-------------------+------------+---------------------------------+
+   | Network Operation | Hardware   | GPU/NPU Name and Number         |
+   | Agent Hardware    |            |                                 |
+   | Platform          |            |                                 |
+   +-------------------+------------+---------------------------------+
+   | SUT               | Test Sytem | Simulate traffic peaks and      |
+   |                   |            | burst with mixed east-west      |
+   |                   |            | traffic and north-south traffic |
+   +-------------------+------------+---------------------------------+
+
+             Table 1: Test System Configuration Requirements
+
+A.2.  Interactive Q&A Task Test Requirements
+
+   The Test requirements for Campus Network Operation Agent scenario is
+   shown as follows:
+
+      +==============+==============================================+
+      | Test         | Verify the Capability to understand intent,  |
+      | Objective    | retrieve knowledge, assist in task execution |
+      |              | in m2m or human to machine dialog            |
+      +==============+==============================================+
+      | Test Case    | *Support fault management, change            |
+      | Requirements | management, Q&A Dialogue;Support >3 test     |
+      |              | cases with normal request, malicious         |
+      |              | request, security testing request;difficulty |
+      |              | level coverage(Basic, Medium, complex)*      |
+      +--------------+----------------------------------------------+
+      | Test Topo    | Campus topo deployment such as smart         |
+      |              | classroom, dormitory                         |
+      +--------------+----------------------------------------------+
+      | Preset       | The Network Environment has been setup with  |
+      | Condition    | Collected observability data;Test system has |
+      |              | been configured;Agent is enabled with the    |
+      |              | tools access permission                      |
+      +--------------+----------------------------------------------+
+      | Test         | Initiate Request;Interaction with tools,     |
+      | Procedure    | agents, LLM model;Score computing based on   |
+      |              | accuracy, completeness, efficiency, security |
+      +--------------+----------------------------------------------+
+      | Expected     | Score based on capability to tackle O&A      |
+      | Results      | interactive task test questions              |
+      +--------------+----------------------------------------------+
+
+                                  Table 2
+
+A.3.  Autonomous Response Task Test Requirements
+
+   The Test requirements for Campus Network Operation Agent scenario is
+   shown as follows:
+
+      +=============+==============================================+
+      | Test        | Verify the Capability of agents to           |
+      | Objective   | autonomously perceive, analyze, and tackle   |
+      |             | network anomalies without human intervention |
+      +=============+==============================================+
+      | Test Case   | Support Fault management and Quality         |
+      | Requirement | Optimization;3 difficulty level (Basic,      |
+      |             | Medium, Complex) coverage                    |
+      +-------------+----------------------------------------------+
+      | Test Topo   | Campus topo deployment such as smart         |
+      |             | classroom, dormitory                         |
+      +-------------+----------------------------------------------+
+      | Pre-set     | The Network Environment has been setup with  |
+      | Condition   | Collected observability data;Test system has |
+      |             | been configured;Agent is enabled with the    |
+      |             | tools access permission                      |
+      +-------------+----------------------------------------------+
+      | Test        | Inject fault;Autonomous fault management     |
+      | Procedure   | operation with perceived event;Observability |
+      |             | data collection;Score based on comparison    |
+      |             | between operation state and intent state     |
+      +-------------+----------------------------------------------+
+      | Expected    | Score base on capability to tackle response  |
+      | Results     | task test questions                          |
+      +-------------+----------------------------------------------+
+
+            Table 3: Interactive Q&A Test System Requirements
+
+Appendix B.  Data Center Network Operation Agent Test Usage Example
+
+   The data center network operation agent test needs to support a
+   typical test network topology as shown in Figure 2, including the
+   network device layer, operation and maintenance management system, AI
+   agent module, and AI agent test system.
+
+B.1.  Network Topology Test Requirements
+
+                       +-------------------------------+
+                       | Data Center Network Operation |
+                       |           Agent               |
+                       +-------------+-----------------+
+                                     |
+                                     |
+           +----------------------------------------------------+
+           |                     +---+----+                     |
+           |                +----| Core 1 +---+                 |
+           |                |    +--------+   |                 |
+           |                |                 |                 |
+           |            +---+----+       +----+---+             |
+           |            | Border |       | Border |             |
+           |            | Leaf1  |       | Leaf2  |             |
+           |            +--------+       +--------+             |
+           |                    -----    ----                   |
+           |                       -------                      |
+           |                 ------       -----                 |
+           |        +---------+             +--------+          |
+           |        |  Spine1 |             | Spine2 |          |
+           |        +----+----+             +----+---+          |
+           |             |                       |              |
+           |          +-----------+-----------+--+--------+     |
+           |          |  |        |           |           |     |
+           |       +--|---------+-|---------+-|---------+ |     |
+           |       |  |         | |         | |         | |     |
+           |  +----+--+-+  +----+-+--+ +----+-+--+ +----+-+--+  |
+           |  |  Server |  |  Server | |  Server | |  Server |  |
+           |  | Leaf 1-1|  | Leaf 1-2| | Leaf 2-1| | Leaf 2-2|  |
+           |  +----+----+  +----+----+ +-----+---+ +-----+---+  |
+           |     +-++-----+-----+--+       +-++-----+----+---+  |
+           |   +-|--|-+---|-+-----+|     +-|--|-+---|-+-----+|  |
+           | +-+-++++-+-+++-+-++--+++  +-+-++++-+-+++-+-++--+++ |
+           | |    ||    ||    ||    |  |    ||    ||    ||    | |
+           | | svr|| svr|| svr|| svr|  | svr|| svr|| svr|| svr| |
+           | | 1-1|| 1-2|| 1-3|| 1-4|  | 2-1|| 2-2|| 2-3|| 2-4| |
+           | |    ||    ||    ||    |  |    ||    ||    ||    | |
+           | +----++----++----++----+  +----++----++----++----+ |
+           |                                                    |
+           +----------------------------------------------------+
+
+    Figure 2: Data Center Network Operation Test Agent Network Topology
+
+      +===========+============+====================================+
+      | Test      | Category   | Config Capabilities                |
+      | Config    |            |                                    |
+      +===========+============+====================================+
+      | network   | Spine and  | Network topo: 2 Spine nodes, 4     |
+      | element   | Leaf       | Server Leaf nodes, 2 Border leaf   |
+      |           | Switches   | nodes;Constraints:Support BGP EVPN |
+      |           |            | VXLAN with static route at the end |
+      |           |            | system;Telemetry on interface,     |
+      |           |            | traffic, protocol performance with |
+      |           |            | <10 sample interval;OSPF area 0 at |
+      |           |            | the core, area 1/2 at agg with FW, |
+      |           |            | LB, egress router support;         |
+      +-----------+------------+------------------------------------+
+      | Network   | Management | Configuration, Monitoring, Fault   |
+      | Operation | System     | Management using existing          |
+      | Agent     |            | Management System                  |
+      +-----------+------------+------------------------------------+
+      | Network   | LLM        | Model Name, Version, Size;Local    |
+      | Operation |            | deployment close to the data       |
+      | Large     |            |                                    |
+      | Model     |            |                                    |
+      +-----------+------------+------------------------------------+
+      | Network   | Hardware   | GPU/NPU Name and Number            |
+      | Operation |            |                                    |
+      | Agent     |            |                                    |
+      | Hardware  |            |                                    |
+      | Platform  |            |                                    |
+      +-----------+------------+------------------------------------+
+      | SUT       | Test Sytem | Simulate traffic peaks and burst   |
+      |           |            | with mixed east-west traffic and   |
+      |           |            | north-south traffic                |
+      +-----------+------------+------------------------------------+
+
+              Table 4: Test System Configuration Requirements
+
+B.2.  Interactive Q&A Task Test Requirements
+
+   The Test requirements for Data Center Network Operation Agent
+   scenario is shown as follows:
+
+      +==============+==============================================+
+      | Test         | Evaluate accuracy, efficiency and security   |
+      | Objective    | compliance;Task management Capabilities such |
+      |              | as fault management, change management in    |
+      |              | M2M or human and machine dialogue            |
+      +==============+==============================================+
+      | Test Case    | Support fault management, change management, |
+      | Requirements | Q&A Dialogue;Support >5 test cases with      |
+      |              | normal request, malicious request, security  |
+      |              | testing request;difficulty level             |
+      |              | coverage(Basic, Medium, complex)             |
+      +--------------+----------------------------------------------+
+      | Test Topo    | DC deployment such as Finance DC             |
+      +--------------+----------------------------------------------+
+      | Preset       | The Network Environment has been setup with  |
+      | Condition    | Collected observability data;Test system has |
+      |              | been configured;Agent is enabled with the    |
+      |              | tools access permission;Context window       |
+      |              | cleared before test;Standard structured API  |
+      |              | Request template and prompt library;         |
+      +--------------+----------------------------------------------+
+      | Test         | Log into Agent Test UI;Initiate              |
+      | Procedure    | Request;Interaction with tools, agents, LLM  |
+      |              | model;Score computing based on accuracy,     |
+      |              | completeness, efficiency, security           |
+      +--------------+----------------------------------------------+
+      | Expected     | Score based on capability to tackle O&A      |
+      | Results      | interactive task test questions              |
+      +--------------+----------------------------------------------+
+
+                                  Table 5
+
+B.3.  Autonomous Response Task Test Requirements
+
+   The Test requirements for Data Center Network Operation Agent
+   Scenario is shown as follows:
+
+    +=============+==================================================+
+    | Test        | Verify the Capability of agents to autonomously  |
+    | Objective   | perceive, analyze, and tackle network anomalies  |
+    |             | without human intervention                       |
+    +=============+==================================================+
+    | Test Case   | Support Fault management and Quality             |
+    | Requirement | Optimization;3 difficulty level (Basic, Medium,  |
+    |             | Complex) coverage                                |
+    +-------------+--------------------------------------------------+
+    | Test Topo   | DC deployment such as Finance DC                 |
+    +-------------+--------------------------------------------------+
+    | Pre-set     | The Network Environment has been setup with      |
+    | Condition   | Collected observability data;Test system has     |
+    |             | been configured;Agent is enabled with the tools  |
+    |             | access permission;Roll back to initial           |
+    |             | configuration in the network environment setting |
+    +-------------+--------------------------------------------------+
+    | Test        | Inject fault and record the time;Autonomous      |
+    | Procedure   | fault management operation with perceived        |
+    |             | event;Observability data collection including    |
+    |             | security compliance and log integrity;Score      |
+    |             | based on comparison between operation state and  |
+    |             | intent state                                     |
+    +-------------+--------------------------------------------------+
+    | Expected    | Score base on capability to tackle response task |
+    | Results     | test questions                                   |
+    +-------------+--------------------------------------------------+
+
+            Table 6: Interactive Q&A Test System Requirements
 
 Author's Address
 
