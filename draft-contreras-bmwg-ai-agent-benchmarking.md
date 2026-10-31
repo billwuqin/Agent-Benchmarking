@@ -212,7 +212,16 @@ testbeds.  Ideally any of these environments should be representative
 enough of the network where the benchmarked agents are expected to be
 deployed, for inscaten in terms of topology, vendors deployed
 (including hardware and software versions), protocols in place,
-   configured services, etc.
+configured services, etc.
+
+The test environment can deploy two or more differentiated network
+topologies to verify the stability of the network operations and
+network management agent when switching to network environments with
+different topologies, protocol configurations, operating states, and
+service scenarios under functionally consistent operations and
+maintenance tasks. Typical network topologies include a three-layer
+architecture of core-aggregation-access in a campus network and
+a two-layer architecture of leaf-spine in a data center.
 
 #  Benchmarking Metrics
 
