@@ -197,7 +197,8 @@ the selected benchmark metrics with a predefined statistical behavior (e.g., nor
 The benchmark report, then, MUST state the number of repetitions, the stopping
 criteria, and the statistical method used to summarize the resulting
 observations. The observed behavior will provide insights of the expected behavior
-once running into production networks, and then its compliance in relation with the expected behavior.
+once running into production networks, and then its compliance in relation with the
+expected behavior.
 
 ##  Task Definition
 
