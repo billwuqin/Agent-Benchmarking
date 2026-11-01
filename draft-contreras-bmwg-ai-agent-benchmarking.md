@@ -440,6 +440,10 @@ this document plus some additional information:
 
 *  Benchmarking metrics and their values
 
+* Statistical characterization of repeated executions, including the
+  number of repetitions, summary statistics, confidence level, confidence
+  interval method, and any statistical distribution assumptions used.
+
 *  Time at which the benchmarking is run and some other conditions
    that could be of interest
 
