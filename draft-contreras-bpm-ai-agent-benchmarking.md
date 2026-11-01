@@ -190,6 +190,15 @@ In order to prevent drifts or excesive randomness in the decisions,
 the benchmark has to be executed multiple times in order to account
 for non-deterministic behavior of AI systems.
 
+To take into account such non-deterministic agent behavior, each benchmark task
+has to be executed multiple times under equivalent and documented test
+conditions.  The number of repetitions has to be sufficient to estimate
+the selected benchmark metrics with a predefined statistical behavior (e.g., normal distribution).
+The benchmark report, then, MUST state the number of repetitions, the stopping
+criteria, and the statistical method used to summarize the resulting
+observations. The observed behavior will provide insights of the expected behavior 
+once running into production networks, and then its compliance in relation with the expected behavior.
+
 ##  Task Definition
 
 The tasks to be accomplished in the benchmarking test should be
