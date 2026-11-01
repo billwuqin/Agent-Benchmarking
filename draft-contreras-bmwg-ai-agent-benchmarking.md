@@ -191,6 +191,7 @@ aspects described in the following sections.
 In order to prevent drifts or excesive randomness in the decisions,
 the benchmark has to be executed multiple times in order to account
 for non-deterministic behavior of AI systems.
+
 To take into account such non-deterministic agent behavior, each benchmark task
 has to be executed multiple times under equivalent and documented test
 conditions.  The number of repetitions has to be sufficient to estimate
