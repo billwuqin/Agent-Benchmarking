@@ -5,8 +5,8 @@
 Benchmarking Methodology                                 L. M. Contreras
 Internet-Draft                                                Telefonica
 Intended status: Informational                                     Q. Wu
-Expires: 4 May 2027                                               Huawei
-                                                         31 October 2026
+Expires: 5 May 2027                                               Huawei
+                                                         1 November 2026
 
 
       Benchmarking Methodology for AI Agents in Network Operations
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 May 2027.
+   This Internet-Draft will expire on 5 May 2027.
 
 Copyright Notice
 
@@ -187,6 +187,15 @@ Table of Contents
 
    *  Characterization of agent behavior across deterministic and
       perturbed operating conditions
+
+   The benchmark results may also provide technical evidence for an
+   external qualification or certification process.  Such a process
+   could define an agent certification profile consisting of a set of
+   benchmark tasks, environmental conditions, acceptance thresholds, and
+   validity constraints applicable to a particular network operational
+   context.  Certification itself, including the designation of
+   certification authorities, governance procedures, and issuance or
+   revocation of certificates, is out of scope of this document.
 
 4.  System Under Test (SUT)
 
