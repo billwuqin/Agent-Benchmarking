@@ -1373,6 +1373,7 @@ operational robustness, and safety/compliance-related behavior<a href="#section-
 perturbed operating conditions<a href="#section-3-6.3.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
+<p id="section-3-7">The benchmark results may also provide technical evidence for an external qualification or certification process.  Such a process could define an agent certification profile consisting of a set of benchmark tasks, environmental conditions, acceptance thresholds, and validity constraints applicable to a particular network operational context. Certification itself, including the designation of certification authorities, governance procedures, and issuance or revocation of certificates, is out of scope of this document.<a href="#section-3-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="system-under-test-sut">
@@ -1453,7 +1454,15 @@ reported.<a href="#section-4-7" class="pilcrow">¶</a></p>
 aspects described in the following sections.<a href="#section-5-1" class="pilcrow">¶</a></p>
 <p id="section-5-2">In order to prevent drifts or excesive randomness in the decisions,
 the benchmark has to be executed multiple times in order to account
-for non-deterministic behavior of AI systems.<a href="#section-5-2" class="pilcrow">¶</a></p>
+for non-deterministic behavior of AI systems.
+To take into account such non-deterministic agent behavior, each benchmark task
+has to be executed multiple times under equivalent and documented test
+conditions.  The number of repetitions has to be sufficient to estimate
+the selected benchmark metrics with a predefined statistical behavior (e.g., normal distribution).
+The benchmark report, then, <span class="bcp14">MUST</span> state the number of repetitions, the stopping
+criteria, and the statistical method used to summarize the resulting
+observations. The observed behavior will provide insights of the expected behavior
+once running into production networks, and then its compliance in relation with the expected behavior.<a href="#section-5-2" class="pilcrow">¶</a></p>
 <div id="task-definition">
 <section id="section-5.1">
         <h3 id="name-task-definition">
@@ -1754,7 +1763,9 @@ more retries permitted by the benchmark procedure.<a href="#section-6.5-3.1.1" c
 <li class="normal" id="section-6.5-5.1">
             <p id="section-6.5-5.1.1">Stability across multiple runs: it is the degree of consistency of
 the benchmark results obtained from repeated executions of the
-same task under equivalent conditions.<a href="#section-6.5-5.1.1" class="pilcrow">¶</a></p>
+same task under equivalent conditions. Stability <span class="bcp14">SHOULD</span> be reported using
+statistical indicators appropriate to the metric, such as variance,
+standard deviation, confidence intervals, etc.<a href="#section-6.5-5.1.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-6.5-6">(Note.  The metric could be reported using statistical indicators
@@ -1877,8 +1888,13 @@ benchmark process runs<a href="#section-7-2.2.1" class="pilcrow">¶</a></p>
           <p id="section-7-2.3.1">Benchmarking metrics and their values<a href="#section-7-2.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-7-2.4">
-          <p id="section-7-2.4.1">Time at which the benchmarking is run and some other conditions
-that could be of interest<a href="#section-7-2.4.1" class="pilcrow">¶</a></p>
+          <p id="section-7-2.4.1">Statistical characterization of repeated executions, including the
+number of repetitions, summary statistics, confidence level, confidence
+interval method, and any statistical distribution assumptions used.<a href="#section-7-2.4.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-7-2.5">
+          <p id="section-7-2.5.1">Time at which the benchmarking is run and some other conditions
+that could be of interest<a href="#section-7-2.5.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="section-7-3">(Note.  To be defined the structure of the report, since could be of
