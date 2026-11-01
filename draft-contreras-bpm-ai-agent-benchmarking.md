@@ -126,6 +126,8 @@ The methodology is intended to enable:
 *  Characterization of agent behavior across deterministic and
    perturbed operating conditions
 
+The benchmark results may also provide technical evidence for an external qualification or certification process.  Such a process could define an agent certification profile consisting of a set of benchmark tasks, environmental conditions, acceptance thresholds, and validity constraints applicable to a particular network operational context. Certification itself, including the designation of certification authorities, governance procedures, and issuance or revocation of certificates, is out of scope of this document.
+
 # System Under Test (SUT)
 
 The System Under Test (SUT) consists of different parts.  It is
@@ -188,7 +190,15 @@ aspects described in the following sections.
 
 In order to prevent drifts or excesive randomness in the decisions,
 the benchmark has to be executed multiple times in order to account
-for non-deterministic behavior of AI systems.
+for non-deterministic behavior of AI systems. 
+To take into account such non-deterministic agent behavior, each benchmark task
+has to be executed multiple times under equivalent and documented test
+conditions.  The number of repetitions has to be sufficient to estimate
+the selected benchmark metrics with a predefined statistical behavior (e.g., normal distribution).
+The benchmark report, then, MUST state the number of repetitions, the stopping
+criteria, and the statistical method used to summarize the resulting
+observations. The observed behavior will provide insights of the expected behavior 
+once running into production networks, and then its compliance in relation with the expected behavior.
 
 ##  Task Definition
 
@@ -359,7 +369,9 @@ number and type of perturbations).
 
 *  Stability across multiple runs: it is the degree of consistency of
    the benchmark results obtained from repeated executions of the
-   same task under equivalent conditions.
+   same task under equivalent conditions. Stability SHOULD be reported using
+   statistical indicators appropriate to the metric, such as variance,
+   standard deviation, confidence intervals, etc.
 
 (Note.  The metric could be reported using statistical indicators
 such as variance, standard deviation, or confidence intervals of
@@ -427,6 +439,10 @@ this document plus some additional information:
    benchmark process runs
 
 *  Benchmarking metrics and their values
+
+* Statistical characterization of repeated executions, including the
+  number of repetitions, summary statistics, confidence level, confidence
+  interval method, and any statistical distribution assumptions used.
 
 *  Time at which the benchmarking is run and some other conditions
    that could be of interest
