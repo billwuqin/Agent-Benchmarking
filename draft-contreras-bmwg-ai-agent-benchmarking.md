@@ -126,6 +126,8 @@ The methodology is intended to enable:
 *  Characterization of agent behavior across deterministic and
    perturbed operating conditions
 
+The benchmark results may also provide technical evidence for an external qualification or certification process.  Such a process could define an agent certification profile consisting of a set of benchmark tasks, environmental conditions, acceptance thresholds, and validity constraints applicable to a particular network operational context. Certification itself, including the designation of certification authorities, governance procedures, and issuance or revocation of certificates, is out of scope of this document.
+
 # System Under Test (SUT)
 
 The System Under Test (SUT) consists of different parts.  It is
