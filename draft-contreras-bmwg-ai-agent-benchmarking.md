@@ -369,7 +369,9 @@ number and type of perturbations).
 
 *  Stability across multiple runs: it is the degree of consistency of
    the benchmark results obtained from repeated executions of the
-   same task under equivalent conditions.
+   same task under equivalent conditions. Stability SHOULD be reported using
+   statistical indicators appropriate to the metric, such as variance,
+   standard deviation, confidence intervals, etc.
 
 (Note.  The metric could be reported using statistical indicators
 such as variance, standard deviation, or confidence intervals of
