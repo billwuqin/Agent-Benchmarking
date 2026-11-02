@@ -29,7 +29,6 @@ normative:
 
 informative:
 
-
 --- abstract
 
 This document defines a benchmarking methodology for evaluating
