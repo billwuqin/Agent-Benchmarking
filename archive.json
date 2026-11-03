@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-01T04:28:46.034394+00:00",
+  "timestamp": "2026-11-03T05:25:57.551208+00:00",
   "repo": "billwuqin/Agent-Benchmarking",
   "labels": [
     {
@@ -418,6 +418,227 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 16,
+      "id": "PR_kwDOU6OITc8AAAABMFYsKg",
+      "title": "Expand benchmark section with certification insights",
+      "url": "https://github.com/billwuqin/Agent-Benchmarking/pull/16",
+      "state": "MERGED",
+      "author": "luismcontreras",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Added details on benchmark results and certification processes for agents.",
+      "createdAt": "2026-11-01T09:00:00Z",
+      "updatedAt": "2026-11-01T10:29:51Z",
+      "baseRepository": "billwuqin/Agent-Benchmarking",
+      "baseRefName": "main",
+      "baseRefOid": "a9eb6888d04c24153fd5cc98da9b2f0ff93f8deb",
+      "headRepository": "luismcontreras/Agent-Benchmarking",
+      "headRefName": "patch-1",
+      "headRefOid": "0ac7e4aea3b6ece4e4c40f39b112ee4dee4d39e7",
+      "closedAt": "2026-11-01T10:29:51Z",
+      "mergedAt": "2026-11-01T10:29:51Z",
+      "mergedBy": "billwuqin",
+      "mergeCommit": {
+        "oid": "12c77c492419d9b0713db164b1f473dd9d1f2e74"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOU6OITc8AAAABVWRERw",
+          "commit": {
+            "abbreviatedOid": "0ac7e4a"
+          },
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-11-01T10:29:40Z",
+          "updatedAt": "2026-11-01T10:29:40Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "id": "PR_kwDOU6OITc8AAAABMFcJ6w",
+      "title": "Enhance benchmark execution and reporting guidelines",
+      "url": "https://github.com/billwuqin/Agent-Benchmarking/pull/17",
+      "state": "MERGED",
+      "author": "luismcontreras",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Clarify the need for multiple executions of benchmark tasks to account for non-deterministic behavior of AI systems, and specify reporting requirements for repetitions and statistical methods.",
+      "createdAt": "2026-11-01T09:09:16Z",
+      "updatedAt": "2026-11-01T10:35:49Z",
+      "baseRepository": "billwuqin/Agent-Benchmarking",
+      "baseRefName": "main",
+      "baseRefOid": "a9eb6888d04c24153fd5cc98da9b2f0ff93f8deb",
+      "headRepository": "luismcontreras/Agent-Benchmarking",
+      "headRefName": "patch-2",
+      "headRefOid": "0606617119b9b25ea65b793ff438ce6de8162057",
+      "closedAt": "2026-11-01T10:35:49Z",
+      "mergedAt": "2026-11-01T10:35:49Z",
+      "mergedBy": "billwuqin",
+      "mergeCommit": {
+        "oid": "09466eb109e60181cbadc7561444fba7a0b17af9"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOU6OITc8AAAABVWSEBw",
+          "commit": {
+            "abbreviatedOid": "0606617"
+          },
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-11-01T10:35:38Z",
+          "updatedAt": "2026-11-01T10:35:38Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "id": "PR_kwDOU6OITc8AAAABMFeexA",
+      "title": "Specify statistical indicators for benchmark stability",
+      "url": "https://github.com/billwuqin/Agent-Benchmarking/pull/18",
+      "state": "MERGED",
+      "author": "luismcontreras",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Clarify the reporting of stability in benchmark results by specifying the use of statistical indicators.",
+      "createdAt": "2026-11-01T09:14:36Z",
+      "updatedAt": "2026-11-01T10:38:25Z",
+      "baseRepository": "billwuqin/Agent-Benchmarking",
+      "baseRefName": "main",
+      "baseRefOid": "a9eb6888d04c24153fd5cc98da9b2f0ff93f8deb",
+      "headRepository": "luismcontreras/Agent-Benchmarking",
+      "headRefName": "patch-3",
+      "headRefOid": "8aba31e97f4e579d10aaef4f7dbd51e29634995b",
+      "closedAt": "2026-11-01T10:38:25Z",
+      "mergedAt": "2026-11-01T10:38:25Z",
+      "mergedBy": "billwuqin",
+      "mergeCommit": {
+        "oid": "afefcee5d05f677171b0d21e9425528ec94bd40b"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOU6OITc8AAAABVWSg9Q",
+          "commit": {
+            "abbreviatedOid": "8aba31e"
+          },
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-11-01T10:38:14Z",
+          "updatedAt": "2026-11-01T10:38:14Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "id": "PR_kwDOU6OITc8AAAABMFf_sA",
+      "title": "Enhance benchmarking metrics section",
+      "url": "https://github.com/billwuqin/Agent-Benchmarking/pull/19",
+      "state": "MERGED",
+      "author": "luismcontreras",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Added details on statistical characterization for benchmarking.",
+      "createdAt": "2026-11-01T09:18:35Z",
+      "updatedAt": "2026-11-01T10:39:07Z",
+      "baseRepository": "billwuqin/Agent-Benchmarking",
+      "baseRefName": "main",
+      "baseRefOid": "a9eb6888d04c24153fd5cc98da9b2f0ff93f8deb",
+      "headRepository": "luismcontreras/Agent-Benchmarking",
+      "headRefName": "patch-4",
+      "headRefOid": "b905e7b987d1d79eb351d0f421cd734a483693a2",
+      "closedAt": "2026-11-01T10:39:06Z",
+      "mergedAt": "2026-11-01T10:39:06Z",
+      "mergedBy": "billwuqin",
+      "mergeCommit": {
+        "oid": "62567cd41091b0165b8bd3f798d60b82bcefdfe3"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOU6OITc8AAAABVWSmaA",
+          "commit": {
+            "abbreviatedOid": "b905e7b"
+          },
+          "author": "billwuqin",
+          "authorAssociation": "OWNER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-11-01T10:38:45Z",
+          "updatedAt": "2026-11-01T10:38:45Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "id": "PR_kwDOU6OITc8AAAABMF-gQg",
+      "title": "Enhance benchmark execution and reporting guidelines- #17",
+      "url": "https://github.com/billwuqin/Agent-Benchmarking/pull/20",
+      "state": "CLOSED",
+      "author": "billwuqin",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-11-01T10:36:20Z",
+      "updatedAt": "2026-11-01T10:41:37Z",
+      "baseRepository": "billwuqin/Agent-Benchmarking",
+      "baseRefName": "main",
+      "baseRefOid": "09466eb109e60181cbadc7561444fba7a0b17af9",
+      "headRepository": "billwuqin/Agent-Benchmarking",
+      "headRefName": "billwuqin-patch-11",
+      "headRefOid": "7219ef7eb5fbf8d85244d8762925c43faa0e6347",
+      "closedAt": "2026-11-01T10:41:37Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOU6OITc8AAAABVWSRPA",
+          "commit": {
+            "abbreviatedOid": "2afbb08"
+          },
+          "author": "github-actions",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-01T10:36:47Z",
+          "updatedAt": "2026-11-01T10:36:47Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "````suggestion\nobservations. The observed behavior will provide insights of the expected behavior\n````",
+              "createdAt": "2026-11-01T10:36:47Z",
+              "updatedAt": "2026-11-01T10:36:47Z"
+            },
+            {
+              "originalPosition": 4,
+              "body": "````suggestion\nfor non-deterministic behavior of AI systems.\n````",
+              "createdAt": "2026-11-01T10:36:47Z",
+              "updatedAt": "2026-11-01T10:36:47Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
